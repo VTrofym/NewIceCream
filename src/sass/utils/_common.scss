@@ -25,7 +25,11 @@ button {
   border: none;
   background: transparent;
 }
-
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 // Common property
 :root {
   font-family: $primary-font;
@@ -60,6 +64,6 @@ button {
     padding: 0 16px;
   }
 }
-
 .button {
+  
 }
