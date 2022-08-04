@@ -1,0 +1,37 @@
+@mixin only-mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin font($fw, $fs, $lh, $ls, $fc) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $fc;
+}
+
+@mixin transition($tp) {
+  transition-property: $tp;
+  transition-duration: $transition-time;
+  transition-timing-function: $transition-function;
+}
