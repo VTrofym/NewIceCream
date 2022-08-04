@@ -4,7 +4,7 @@
       <path fill="none" stroke-width="2.286" d="M0 2.286h45.714M0 16h45.714M0 29.714h45.714"/>
     </symbol>
     <symbol id="icon-close" viewBox="0 0 32 32">
-      <path fill="none" stroke="#fff" style="stroke:var(--color2, #fff)" stroke-width="2" d="m2.518 2 26.963 28M2 29.481 30 2.518"/>
+      <path stroke-width="2" d="m2.518 2 26.963 28M2 29.481 30 2.518"/>
     </symbol>
     <symbol id="icon-logo" viewBox="0 0 127 32">
       <path fill="#fff" style="fill: var(--color1, #fff)" d="M31.36 16.32c0 8.66-6.877 15.68-15.36 15.68s-15.36-7.020-15.36-15.68c0-8.66 6.877-15.68 15.36-15.68s15.36 7.020 15.36 15.68z"></path>
