@@ -1,4 +1,4 @@
-.container-advantages {
+.advantages {
     background-color: #FFF5F6;
     outline: 1px solid tomato;
 
@@ -94,18 +94,16 @@
 .advantages__amount {
     font-family: 'Titan One';
     font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: calc(41/36);
-    letter-spacing: 0.04em;
+
+    @include font(400, 36px, calc(41/36), 0.04em, #D41443);
+
     text-transform: uppercase;
-    
-    color: #D41443;
 
     margin-bottom: 25px;
 
     @include tablet {
         margin-bottom: 13px;
+
         font-size: 48px;
         line-height: calc(55/48);
     }
@@ -113,6 +111,7 @@
     @include desktop {
         font-size: 58px;
         line-height: calc(66/58);
+
         margin-bottom: 16px;
     }
 }
@@ -120,11 +119,8 @@
 .advantages__quality {
     font-family: 'DM Sans';
     font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.7;
-    
-    color: #000000;
+
+    @include font(700, 12px, 1.7, null, #000000);
 
     @include tablet {
         font-size: 14px;
@@ -132,8 +128,6 @@
     }
 
     @include desktop {
-        font-size: 16px;
-        line-height: 1.76;
-        letter-spacing: 0.02em;
+        @include font(null, 16px, 1.76, 0.02, null);
     }
 }
