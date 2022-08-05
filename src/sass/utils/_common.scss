@@ -70,6 +70,7 @@ img{
 
   font-family: $primary-font;
   @include font (700,16px,(21 / 16),null,$primary-color);
+  text-decoration: none;
 
   background-color:$acent-color;
 

@@ -1,0 +1,71 @@
+// Section styles
+.hero {
+  padding-top: 194px;
+  padding-bottom: 158px;
+
+  background-color: $hero-bkg-color;
+  background: url('.././images/hero1-mob.png');
+  background-repeat: no-repeat;
+  background-position: 117px bottom;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 36px;
+    top: 83px;
+
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: #FFA5BA;
+    z-index: -1;
+  }
+}
+// Main title
+.hero__title {
+  width: 230px;
+ @include font(400, 26px, (30 / 26),0.04em,null);
+  font-family: 'Titan One';
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.hero__title--acent {
+  display: block;
+  @include font(null, 48px, 1, null, $acent-color);
+}
+// Container with button
+.hero__buttons {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 8px;
+}
+
+.hero__item {}
+
+.button {}
+
+// Hero button style
+.hero__button {
+height: 24px;
+width: 63px;
+padding: 8px 0;
+@include font(400,8px,(10 / 8),null,null);
+}
+.hero__button--light{
+  width: 83px;
+}
+
+.hero__text{
+  display: none;
+}
+.hero__achivments {
+  display: none;
+}
+
+.achivments {}
+
+.achive {}
+
+.achive__text {}
+
+.achive__number {}
