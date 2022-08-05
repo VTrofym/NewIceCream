@@ -1,0 +1,89 @@
+// Page header styles
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 58px;
+
+  padding-top: 8px;
+
+  @include tablet {
+    height: 82px;
+    padding-top: 32px;
+  }
+  @include desktop {
+    height: 87px;
+    padding-top: 37px;
+  }
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// Main page header navigation
+.header__nav {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    column-gap: 128px;
+  }
+}
+// Company logo
+.logo {
+  display: block;
+  height: 50px;
+  text-decoration: none ;
+  @include desktop {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+// Header navigation links
+.header__list {
+  display: none;
+  @include desktop{
+    display: flex;
+    column-gap: 35px;
+  }
+}
+// Navigation link
+.header__link {
+  @include desktop {
+    font-family: $primary-font;
+    text-decoration: none;
+    @include font(700, 16px, (21 / 16), null, inherit);
+    @include transition (color);
+  &:hover,&:focus {
+    color: $acent-color
+  }
+  }
+}
+// Header interactive button
+.header__buttons {
+  @include tablet {
+    display: flex;
+    column-gap: 22px;
+  }
+}
+// Burger menu button
+.menu-button {
+  padding: 10px;
+  @include desktop{
+    display: none;
+  }
+}
+.menu-button__icon {
+  stroke: $acent-color;
+  @include transition (stroke);
+  &:hover, &:focus {
+    stroke: #FFFFFF;
+  }
+}
+// Header modal button
+.header__button {
+@include only-mobile{
+  display: none;
+  }
+}

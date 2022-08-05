@@ -1,7 +1,4 @@
 // Reset
-body {
-}
-
 h1,
 h2,
 h3,
@@ -25,7 +22,11 @@ button {
   border: none;
   background: transparent;
 }
-
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 // Common property
 :root {
   font-family: $primary-font;
@@ -36,7 +37,6 @@ button {
 
   color: $primary-color;
 }
-
 // Common styles
 .container {
   max-width: 480px;
@@ -60,6 +60,45 @@ button {
     padding: 0 16px;
   }
 }
-
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 8px;
+
+  padding: 11px 37px;
+
+  font-family: $primary-font;
+  @include font (700,16px,(21 / 16),null,$primary-color);
+
+  background-color:$acent-color;
+
+  border-radius: 22px;
+  cursor: pointer;
+  @include transition (background-color color);
+  &:hover, &:focus{
+    background-color: $button-hover;
+    color: $acent-color;
+  }
+}
+.button--light {
+  background-color: $alternative-color;
+  color: $acent-color;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
