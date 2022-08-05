@@ -80,6 +80,9 @@
     right: 0;
     bottom: 0;
   }
+    @include desktop {
+      right: 16px;
+    }
 }
 // All content in section
 .hero__content{
@@ -94,7 +97,7 @@
 .hero__title {
   width: 230px;
  @include font(400, 26px, (30 / 26),0.04em,null);
-  font-family: 'Titan One';
+  font-family: $second-font;
   font-style: normal;
   text-transform: uppercase;
   @include tablet{
@@ -167,6 +170,7 @@ padding: 8px 0;
 .hero__text{
   display: none;
   @include tablet{
+    font-family: $primary-font;
     display: block;
     grid-row: 3;
     grid-column: 2;
@@ -196,6 +200,7 @@ padding: 8px 0;
   @include desktop {
     width: 26px;
     height: 26px;
+    margin-top: 20px;
   }
 }
 
@@ -215,6 +220,10 @@ padding: 8px 0;
     padding-right: 8px;
     padding-top: 1px;
   }
+    @include desktop {
+      padding-right: 23px;
+      padding-top: 4px;
+    }
 }
 // Achive circle
 .achive {
@@ -222,8 +231,8 @@ padding: 8px 0;
   &::before{
     content: '';
     position: absolute;
-    right: -8;
-    top: -1;
+    right: -18;
+    top: -4;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -248,7 +257,7 @@ padding: 8px 0;
 
 .achive__number {
   display: block;
-  font-family: 'Titan One';
+  font-family: $second-font;
   text-transform: uppercase;
   @include font(400, 28px, (32 / 28), null, $acent-color);
   @include desktop {
