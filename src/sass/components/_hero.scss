@@ -1,24 +1,45 @@
 // Section styles
 .hero {
+  background-color: $hero-bkg-color;
+  overflow: hidden;
+}
+
+// Backgrounds
+.hero__wraper{
   padding-top: 194px;
   padding-bottom: 158px;
+  position: relative;
 
-  background-color: $hero-bkg-color;
-  background: url('.././images/hero1-mob.png');
-  background-repeat: no-repeat;
-  background-position: 117px bottom;
-  &::after{
+  @include tablet{
+    padding-top: 92px;
+    padding-bottom: 56px;
+  }
+  // Circle
+    &::before {
     content: '';
     position: absolute;
+    bottom: 75px;
     left: 36px;
-    top: 83px;
-
+  
     width: 346px;
     height: 344px;
     border-radius: 50%;
     background-color: #FFA5BA;
-    z-index: -1;
+    @include tablet{
+      left: 216px;
+      bottom: 40px;
+    }
   }
+}
+// All content in section
+.hero__content{
+  position: relative;
+  z-index: 998;
+  @include tablet{
+    display: grid;
+    grid-template: repeat(4,auto)/auto 1fr auto;
+  }
+  
 }
 // Main title
 .hero__title {
@@ -27,17 +48,30 @@
   font-family: 'Titan One';
   font-style: normal;
   text-transform: uppercase;
+  @include tablet{
+    grid-column: 1;
+    padding-top: 10px;
+    @include font(400, 22px, (25 / 22), null, null);
+  }
 }
-
+// Title acent
 .hero__title--acent {
+  padding: 0;
+  margin: 0;
   display: block;
   @include font(null, 48px, 1, null, $acent-color);
+  @include tablet {
+  font-size: 34px;
+  }
 }
 // Container with button
 .hero__buttons {
   margin-top: 20px;
   display: flex;
   column-gap: 8px;
+  @include tablet{
+    grid-row: 2;
+  }
 }
 
 .hero__item {}
@@ -54,18 +88,83 @@ padding: 8px 0;
 .hero__button--light{
   width: 83px;
 }
-
+// Text
 .hero__text{
   display: none;
+  @include tablet{
+    display: block;
+    grid-row: 3;
+    grid-column: 2;
+
+    margin-top: 61px;
+    margin-left: -10px;
+    @include font(400, 8px, (12 / 8), null, null);
+    width: 114px;
+  }
 }
-.hero__achivments {
+// Button more text
+.hero__button-more{
   display: none;
+  @include tablet {
+    display: flex;
+    grid-row: 4;
+    grid-column: 2;
+
+    margin-top: 7px;
+    margin-left: -10px;
+  }
 }
 
-.achivments {}
+// Company advantage
+.achivments {
+  display: none;
+  
+  @include tablet {
+    display: block;
+    grid-column: 3;
+    padding-right: 8px;
+    padding-top: 1px;
+  }
+}
 
-.achive {}
+.achive {
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    right: -8;
+    top: -1;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $alternative-color;
+    z-index: -1;
+  }
+}
 
-.achive__text {}
+.achive__text {
+  font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+  
+    color: #FFFFFF;
+}
 
-.achive__number {}
+.achive__number {
+  display: block;
+  font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    /* identical to box height */
+  
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    color: #D41443;
+}

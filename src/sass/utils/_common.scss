@@ -86,6 +86,31 @@ img{
   background-color: $alternative-color;
   color: $acent-color;
 }
+.button-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: $alternative-color;
+  border-radius: 50%;
+
+  fill: $acent-color;
+  cursor: pointer;
+
+  @include transition (background-color fill);
+
+  &:focus,&:hover{
+    background-color: $acent-color;
+    fill: $alternative-color;
+  }
+}
+
+
+
+
 .visually-hidden {
   position: absolute;
   width: 1px;
