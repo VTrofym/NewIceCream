@@ -1,325 +1,122 @@
 @mixin before($without, $ib, $w, $h, $tr, $c, $mb) {
-    content: $without;
-    display: $ib;
-    width: $w;
-    height: $h;
-    background-color: $tr;
-    background-size: $c;
-    margin-bottom: $mb;
+  content: $without;
+  display: $ib;
+  width: $w;
+  height: $h;
+  background-color: $tr;
+  background-size: $c;
+  margin-bottom: $mb;
 }
 
 .advantages {
-    background-color: $advantages-bkg;
-}
+  background-color: $advantages-bkg;
+  padding: 40px 0px 88px;
 
-.container-advantages {
-    padding: 40px 70px 88px 20px;
-
-    @include tablet {
-        padding: 60px 23px 247px 23px;
-    }
-    @include desktop {
-        padding: 121px 96px 209px 16px;
-    }
+  @include tablet {
+    padding: 60px 0px 247px;
+  }
+  @include desktop {
+    padding: 121px 0px 209px;
+  }
 }
 
 .advantages__list {
-    
-    @include tablet {
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
-    }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
 }
 
 .advantages__indicators {
-    &:not(:last-child) {
-        margin-bottom: 32px;
-    }
-    @include tablet {
-        gap: 15px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  @include tablet {
+    gap: 15px;
+  }
 }
 
 .advantages__indicators--liters::before {
-    background-image: url(../images/advantages.png/advantages1.png);
-    @include before('', inline-block, 33px, 50px, transparent, contain, 16px);
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-1-2x.png);
+  @include before('', inline-block, 33px, 50px, transparent, contain, 16px);
 
-        @include tablet {
-            margin-bottom: 36px;
-        }
+  @include tablet {
+    margin-bottom: 36px;
+  }
 
-    @include desktop {
-        margin-bottom: 40px;
-    }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__indicators--apples::before {
-    background-image: url(../images/advantages.png/advantages2.png);
-    @include before('', inline-block, 50px, 50px, transparent, contain, 16px);
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-2-2x.png);
+  @include before('', inline-block, 50px, 50px, transparent, contain, 16px);
 
-    @include tablet {
-        margin-bottom: 36px;
-    }
+  @include tablet {
+    margin-bottom: 36px;
+  }
 
-    @include desktop {
-        margin-bottom: 40px;
-    }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__indicators--hearts::before {
-    background-image: url(../images/advantages.png/advantages3.png);
-    stroke: #FFA5BA;
-    fill: #FFA5BA;
-    @include before('', inline-block, 44px, 50px, transparent, contain, 16px);
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-3-2x.png);
+  stroke: #ffa5ba;
+  fill: #ffa5ba;
+  @include before('', inline-block, 44px, 50px, transparent, contain, 16px);
 
-    @include tablet {
-        margin-bottom: 36px;
-    }
+  @include tablet {
+    margin-bottom: 36px;
+  }
 
-    @include desktop {
-        margin-bottom: 40px;
-    }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__amount {
-    font-family: 'Titan One';
-    font-style: normal;
+  font-family: 'Titan One';
+  font-style: normal;
 
-    @include font(400, 36px, calc(41 / 36), 0.04em, #D41443);
+  @include font(400, 36px, 1.14, 0.04em, #d41443);
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 
-    @include tablet {
-        margin-bottom: 13px;
+  @include tablet {
+    margin-bottom: 13px;
 
-        font-size: 48px;
-        line-height: calc(55 / 48);
-    }
+    font-size: 48px;
+    line-height: 1.14;
+  }
 
-    @include desktop {
-        font-size: 58px;
-        line-height: calc(66 / 58);
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.14;
 
-        margin-bottom: 16px;
-    }
+    margin-bottom: 16px;
+  }
 }
 
 .advantages__quality {
-    font-family: 'DM Sans';
-    font-style: normal;
+  width: 230px;
+  font-family: 'DM Sans';
+  font-style: normal;
 
-    @include font(700, 12px, 1.7, null, #000000);
+  @include font(700, 12px, 1.7, null, #000000);
 
-    @include tablet {
-        font-size: 14px;
-        line-height: 1.74;
-    }
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.74;
+  }
 
-    @include desktop {
-        @include font(null, 16px, 1.76, 0.02, null);
-    }
+  @include desktop {
+    width: 288px;
+    @include font(null, 16px, 1.76, 0.02, null);
+  }
 }
-
-
-
-.container-gallery {
-    outline: 1px solid tomato;
-    padding: 0;
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    position: relative;
-
-    @include desktop {
-        padding: 0 94px;
-    }
-}
-
-.box {
-    width: 44px;
-    height: 44px;
-    background-color: tomato;
-    border-radius: 8px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-
-    @include tablet {
-        width: 105px;
-        height: 105px;
-        margin-right: 6px;
-        margin-bottom: 6px;
-        border-radius: 20px;
-    }
-    @include desktop {
-        width: 138px;
-        height: 138px;
-        margin-right: 8px;
-        margin-bottom: 8px;
-        border-radius: 20px;
-    }
-}
-
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(50%);
-
-    @include tablet {
-        transform: translateY(-75%);
-    }
-    @include desktop {
-        transform: translateY(35%);
-    }
-}
-
-.div2 {
-    grid-area: 1 / 2 / 2 / 3;
-    
-    @include tablet {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(-115%);
-    }
-    @include desktop {
-        transform: translateY(0%);
-    }
-}
-
-.div3 {
-    grid-area: 2 / 2 / 3 / 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-105%);
-
-    @include tablet {
-        transform: translateY(-220%);
-    }
-    @include desktop {
-        transform: translateY(-106%);
-    }
-}
-
-.div4 {
-    grid-area: 1 / 3 / 2 / 4;
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translateY(-30%);
-    width: 90px;
-    height: 90px;
-
-    @include tablet {
-        width: 215px;
-        height: 215px;
-        transform: translateY(-85%);
-    }
-    @include desktop {
-        width: 283px;
-        height: 283px;
-        transform: translateY(-25%);
-    }
-}
-
-.div5 {
-    grid-area: 2 / 3 / 3 / 4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-62%);
-
-    @include tablet {
-        transform: translateY(-175%);
-    }
-    @include desktop {
-        transform: translateY(-53%);
-    }
-}
-
-.div6 {
-    grid-area: 1 / 4 / 2 / 5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(10%);
-
-    @include tablet {
-        transform: translateY(-105%);
-    }
-    @include desktop {
-        transform: translateY(5%);
-    }
-}
-
-.div7 {
-    grid-area: 2 / 4 / 3 / 5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-95%);
-
-    @include tablet {
-        transform: translateY(-212%);
-    }
-    @include desktop {
-        transform: translateY(-102%);
-    }
-}
-
-.div8 {
-    grid-area: 1 / 5 / 2 / 6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-25%);
-
-    @include tablet {
-        transform: translateY(-132%);
-    }
-    @include desktop {
-        transform: translateY(-15%);
-    }
-}
-
-.div9 {
-    grid-area: 2 / 5 / 3 / 6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-130%);
-
-    @include tablet {
-        transform: translateY(-238%);
-    }
-    @include desktop {
-        transform: translateY(-122%);
-    }
-}
-
-.div10 {
-    grid-area: 1 / 6 / 2 / 7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(35%);
-
-    @include tablet {
-        transform: translateY(-68%);
-    }
-    @include desktop {
-        transform: translateY(50%);
-    }
-}
-
