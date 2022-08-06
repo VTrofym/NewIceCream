@@ -1,16 +1,13 @@
 .footer {
   background: #fff5f6;
-  padding-top: 40px;
-
-  @include desktop {
-    padding-top: 120px;
-  }
 }
 
 // footer__text&social-box
 
 .footer__text-social-box {
-  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -18,14 +15,14 @@
   }
 
   @include desktop {
-    margin-bottom: 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
 // footer-text
-
 .footer-text {
-  @include only-mobile {
+  @media screen and (max-width: 767px) {
     margin-bottom: 40px;
   }
 }
@@ -121,8 +118,21 @@
 }
 
 .social-box__text {
-  text-align: end;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: right;
   color: black;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .social-box__tel {
@@ -131,12 +141,6 @@
 }
 
 // copypass
-
-.line {
-  border-bottom: 1px solid #e1e1e1;
-
-  width: 100%;
-}
 
 .copypass {
   margin: 0 auto;
@@ -152,5 +156,25 @@
   @media screen and (max-width: 767px) {
     max-width: 180px;
     line-height: 1.52;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+  }
+}
+
+.line {
+  position: relative;
+
+  @include desktop {
+    width: 1168px;
+    margin: 0 auto;
   }
 }
