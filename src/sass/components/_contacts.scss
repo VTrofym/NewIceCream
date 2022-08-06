@@ -1,9 +1,12 @@
 .contacts {
+    padding-top: 60px;
 background: linear-gradient(#fff 362px, #FFF5F6 362px);
     @include tablet {
+        padding-top: 80px;
         background: linear-gradient(#fff 379px, #FFF5F6 379px);
     }
     @include desktop {
+        padding-top: 120px;
         background: linear-gradient(#fff 219px, #FFF5F6 219px);
     }
 }
@@ -15,17 +18,17 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
 .contacts__section {
     display: flex;
     flex-direction: column;
-    // min-width: 280px;
-    // // width: 100%;
     padding: 0;
     padding-bottom: 32px;
     @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
+    gap: 32px;
+
     margin-left: -16px;
     margin-right: -16px;
-    gap: 32px;
-    // padding-bottom: 60px;
+
+    padding-bottom: 60px;
 }
     @media screen and (min-width: 1200px) {
     margin-left: 0;
@@ -46,8 +49,6 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
         @media screen and (min-width: 768px) {
         max-width: 224px;
         width: 100%;
-        // height: 528px;
-        // padding: 0 16px;
         margin-bottom: 0;   
         gap: 32px;
         }
@@ -71,7 +72,6 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
     font-size: 12px;
     line-height: 1.83;
     width: 80px;
-    // height: 16px;
     text-transform: uppercase;
     color: $primary-color;
     background-color: #F0D1A5;
@@ -96,10 +96,8 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
 }
 
 .contacts__items {
-    // margin-bottom: 24px;
     border-bottom: 1px solid #E1E1E1; 
     @media screen and (min-width:768px) {
-    // margin-bottom: 32px;
     }
 }
 
@@ -203,13 +201,11 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
 .time {
     color: #FFA5BA;
 }
-// .white {fill: #fff;}
 
 .contacts__button {
     display: flex;
     flex-direction: column;
-    // margin-left: auto;
-    // margin-right: auto;
+    row-gap: 10px;
     @media screen and (min-width:768px) {
     gap: 14.5px;
     flex-direction: row;
@@ -219,50 +215,31 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
     gap: 12px;
   } 
 }
-
-// .button--light {}
-
 .locations {
-    width: 162px;
     height: 44px;
-    margin-bottom: 10px;
-    font-family: $primary-font;
-    font-size: 16px;
     margin-left: auto;
     margin-right: auto;
-    // padding: 0 32px;
-    font-weight: 700;
-    line-height: 1.31;
-    align-items: center;
-    text-align: center;
+    padding: 11px 17px;
     @media screen and (min-width:768px) { 
     margin: 0; 
     width: 191px;
   } 
   @media screen and (min-width:1200px) {
     width: 198px;
-    height: 45px;
   }
 }
 
 .franchise {
     margin-left: auto;
     margin-right: auto;
-    // padding: 0 32px;
-    width: 162px;
+
     height: 44px;
-    font-family: $primary-font;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    align-items: center;
-    text-align: center;
+    padding-top: 11px;
      @media screen and (min-width: 768px) { 
     width: 174px;
     margin: 0;
   } 
   @media screen and (min-width:1200px) {
     width: 168px;
-    height: 45px;
   }
 }
