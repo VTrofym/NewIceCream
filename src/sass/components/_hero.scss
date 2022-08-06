@@ -1,24 +1,27 @@
 // Section styles
 .hero {
+  position: relative;
   background-color: $hero-bkg-color;
   overflow: hidden;
 }
 
-// Backgrounds
 .hero__wraper{
+  position: relative;
   padding-top: 194px;
   padding-bottom: 158px;
-  position: relative;
-
-  @include tablet{
+  @include tablet {
     padding-top: 92px;
     padding-bottom: 56px;
+  }
+  @include desktop {
+    padding-top: 147px;
+    padding-bottom: 84px;
   }
   // Circle
     &::before {
     content: '';
     position: absolute;
-    bottom: 75px;
+    top: 83px;
     left: 36px;
   
     width: 346px;
@@ -26,10 +29,60 @@
     border-radius: 50%;
     background-color: #FFA5BA;
     @include tablet{
-      left: 216px;
-      bottom: 40px;
+      top: 43px;
+      left: 248px;
+      width: 335px;
+      height: 333px;
+    }
+    @include tablet {
+      top: 54px;
+      left: 517px;
+      width: 534px;
+      height: 534px;
     }
   }
+}
+// Images
+.hero__thumb {
+  position: absolute;
+}
+
+.hero__bg--icecream {
+  top: 92px;
+  left: 97px;
+  @include tablet {
+    top: 80px;
+    left: 322px;
+  }
+  @include desktop{
+    top: 107px;
+    left: 634px;
+  }
+}
+
+.hero__bg--milk {
+  display: none;
+  @include tablet {
+    display: block;
+    left: 0;
+    bottom: 16px;
+  }
+  @include desktop{
+    left: 16px;
+    bottom: 60px;
+  }
+}
+
+.hero__bg--girl {
+  display: none;
+  @include tablet{
+    display: block;
+    right: 0;
+    bottom: 0;
+  }
+    @include desktop {
+      right: 16px;
+    }
 }
 // All content in section
 .hero__content{
@@ -39,29 +92,42 @@
     display: grid;
     grid-template: repeat(4,auto)/auto 1fr auto;
   }
-  
 }
 // Main title
 .hero__title {
   width: 230px;
  @include font(400, 26px, (30 / 26),0.04em,null);
-  font-family: 'Titan One';
+  font-family: $second-font;
   font-style: normal;
   text-transform: uppercase;
   @include tablet{
     grid-column: 1;
+    width: 162px;
     padding-top: 10px;
-    @include font(400, 22px, (25 / 22), null, null);
+    font-size: 22px;
+    line-height: (25 / 22);
+  }
+  @include desktop {
+    width: 277px;
+    padding-top: 0;
+    font-size: 38px;
+    line-height: (44 /38) ;
+
   }
 }
+
 // Title acent
 .hero__title--acent {
+  display: block;
   padding: 0;
   margin: 0;
   display: block;
-  @include font(null, 48px, 1, null, $acent-color);
+  @include font(null, 48px, 0.9, null, $acent-color);
   @include tablet {
-  font-size: 34px;
+    font-size: 34px;
+  }
+  @include desktop {
+    font-size: 58px;
   }
 }
 // Container with button
@@ -72,11 +138,11 @@
   @include tablet{
     grid-row: 2;
   }
+  @include desktop {
+    padding-top: 24px;
+    column-gap: 12px;
+  }
 }
-
-.hero__item {}
-
-.button {}
 
 // Hero button style
 .hero__button {
@@ -84,14 +150,27 @@ height: 24px;
 width: 63px;
 padding: 8px 0;
 @include font(400,8px,(10 / 8),null,null);
+@include desktop {
+  width: 107px;
+  height: 40px;
+
+  padding: 12px 0;
+
+  font-size: 14px;
+  line-height: (18 / 14);
+}
 }
 .hero__button--light{
   width: 83px;
+  @include desktop {
+    width: 138px;
+  }
 }
 // Text
 .hero__text{
   display: none;
   @include tablet{
+    font-family: $primary-font;
     display: block;
     grid-row: 3;
     grid-column: 2;
@@ -99,10 +178,15 @@ padding: 8px 0;
     margin-top: 61px;
     margin-left: -10px;
     @include font(400, 8px, (12 / 8), null, null);
-    width: 114px;
+    width: 120px;
+    @include desktop {
+      width: 200px;
+      font-size: 14px;
+      line-height: (20 / 14);
+    }
   }
 }
-// Button more text
+// Button more text button
 .hero__button-more{
   display: none;
   @include tablet {
@@ -113,8 +197,19 @@ padding: 8px 0;
     margin-top: 7px;
     margin-left: -10px;
   }
+  @include desktop {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+  }
 }
 
+.button-more__icon--desk{
+  @include desktop {
+    width: 8px;
+    height: 8px;
+  }
+}
 // Company advantage
 .achivments {
   display: none;
@@ -125,46 +220,49 @@ padding: 8px 0;
     padding-right: 8px;
     padding-top: 1px;
   }
+    @include desktop {
+      padding-right: 23px;
+      padding-top: 4px;
+    }
 }
-
+// Achive circle
 .achive {
   position: relative;
   &::before{
     content: '';
     position: absolute;
-    right: -8;
-    top: -1;
+    right: -18;
+    top: -4;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: $alternative-color;
     z-index: -1;
+    @include desktop {
+      width: 30px;
+      height: 30px;
+    }
   }
-}
-
-.achive__text {
-  font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 10px;
-    text-align: right;
   
-    color: #FFFFFF;
+}
+// Acheve text
+.achive__text {
+  text-align: right;
+  @include font(400, 8px, (10 / 8), null, null);
+  @include desktop {
+    font-size: 14px;
+    line-height: (18 / 14);
+  }
 }
 
 .achive__number {
   display: block;
-  font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 32px;
-    /* identical to box height */
-  
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  
-    color: #D41443;
+  font-family: $second-font;
+  text-transform: uppercase;
+  @include font(400, 28px, (32 / 28), null, $acent-color);
+  @include desktop {
+    font-size: 46px;
+    line-height: (53 / 46);
+
+  }
 }
