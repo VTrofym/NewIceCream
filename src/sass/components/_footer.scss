@@ -1,3 +1,156 @@
-.footer-tytle {
-  color: red;
+.footer {
+  background: #fff5f6;
+  padding-top: 40px;
+
+  @include desktop {
+    padding-top: 120px;
+  }
+}
+
+// footer__text&social-box
+
+.footer__text-social-box {
+  margin-bottom: 40px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+// footer-text
+
+.footer-text {
+  @include only-mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.footer-text__one {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: start;
+  color: #ffa5ba;
+  max-width: 232px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+    max-width: 340px;
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.footer-text__two {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $acent-color;
+  max-width: 200px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.15;
+    max-width: 340px;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+    max-width: 100%;
+  }
+}
+
+// social-box
+
+.social-box__scroll {
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+  margin-bottom: 40px;
+}
+
+.social-box__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  fill: $alternative-color;
+
+  transition: background-color $transition-time $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: $acent-color;
+  }
+
+  @include tablet {
+    width: 34px;
+    height: 34px;
+  }
+
+  @include desktop {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.social-box__text {
+  text-align: end;
+  color: black;
+}
+
+.social-box__tel {
+  text-decoration: none;
+  color: $acent-color;
+}
+
+// copypass
+
+.line {
+  border-bottom: 1px solid #e1e1e1;
+
+  width: 100%;
+}
+
+.copypass {
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: #907e82;
+
+  @media screen and (max-width: 767px) {
+    max-width: 180px;
+    line-height: 1.52;
+  }
 }
