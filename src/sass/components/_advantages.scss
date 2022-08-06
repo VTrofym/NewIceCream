@@ -10,13 +10,13 @@
 
 .advantages {
   background-color: $advantages-bkg;
-  padding: 40px 0px 88px;
+  padding: 40px 0px 60px;
 
   @include tablet {
-    padding: 60px 0px 247px;
+    padding: 60px 0px 64px;
   }
   @include desktop {
-    padding: 121px 0px 209px;
+    padding: 121px 0px 120px;
   }
 }
 
@@ -29,8 +29,10 @@
 }
 
 .advantages__indicators {
-  &:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
     margin-bottom: 32px;
+  }
   }
   @include tablet {
     gap: 15px;
