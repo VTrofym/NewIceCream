@@ -49,38 +49,21 @@
     position: relative;
 }
 
-.card__img-1{
-    
-    background-image: url(../images/products/card-bg/Product-bg1-desk.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 0px bottom 0px;
+.card__bg-1{
+    background-color: $hero-bkg-color;
+    border-radius: 24px;
     max-width: 368px;
     height: 535px;
-    ::before {
-            content:'';
-            position: absolute;
-            top: -50%;
-            left: 0;
-            background-image: url(../images/products/card_img/card-img1-desk.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 368px;
-            height: 394px;
-            z-index: 3;
-        }
+   
 
 }
 
-.card__img-2{
-    
-    background-image: url(../images/products/card-bg/Product-bg2-desk.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 0px bottom 0px;
+.card__bg-2{
+    background-color: #F0D1A5;
+    border-radius: 24px;
     max-width: 368px;
     height: 535px;
-    ::before {
+    &::before {
             content:'';
             position: absolute;
             top: -50%;
@@ -95,15 +78,12 @@
 
 }
 
-.card__img-3{
-   
-    background-image: url(../images/products/card-bg/Product-bg3-desk.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 0px bottom 0px;
+.card__bg-3{
+    background-color: #C2E297;
+    border-radius: 24px;
     max-width: 368px;
     height: 535px;
-    ::before {
+    &::before {
             content:'';
             top: -50%;
             left: 0;
@@ -144,9 +124,9 @@
 }
 
 .card__btn{
-    display: block;
     width: 38px;
     height: 40px;
+    margin: 0 auto;
 
 }
 
