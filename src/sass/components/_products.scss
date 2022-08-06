@@ -205,23 +205,27 @@
 }
 
 .card__bg{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0px 40px 40px;
     width: 100%;
     width: 280px;
-    height: 78%;
+    height: 489px;
+    // height: 78%;
     border-radius: 24px;
 
     @include tablet {
-        height: 75%;
+        // height: 75%;
+        height: 473px;
         width: 224px;
         padding: 0px 40px 32px;
     }
     
     @include desktop {
-        height: 67%;
+        // height: 67%;
+        height: 535px;
         width: 368px;
         padding: 0px 60px 61px;
     }
@@ -246,13 +250,26 @@
     font-family: 'Titan One';
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 70px;
    
     &::after{
         content:'...';
         display: flex;
+        position: absolute;
+        z-index: 4;
+        top: 215px;
+        left: 127px;
+        height: 5px;
         flex-direction: column;
         justify-content: center;
+        @include tablet {
+            top: 173px;
+            left: 99px;
+        }
+        @include desktop {
+            top: 231px;
+            left: 171px;
+        }
     }
     
     @include desktop {
@@ -276,7 +293,7 @@
 }
 
 .card__btn{
-    width: 38px;
+    width: 40px;
     height: 40px;
     margin: 0 auto;
 }
