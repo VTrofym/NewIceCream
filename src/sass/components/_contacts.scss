@@ -1,5 +1,11 @@
 .contacts {
-background-color: #FFF5F6;
+background: linear-gradient(#fff 362px, #FFF5F6 362px);
+    @include tablet {
+        background: linear-gradient(#fff 379px, #FFF5F6 379px);
+    }
+    @include desktop {
+        background: linear-gradient(#fff 219px, #FFF5F6 219px);
+    }
 }
 
 .contacts__title {
