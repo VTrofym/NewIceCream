@@ -1,5 +1,6 @@
 .footer {
   background: #fff5f6;
+  position: relative;
 }
 
 // footer__text&social-box
@@ -161,20 +162,20 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 61px;
     left: 0;
 
     width: 100%;
     height: 1px;
     background-color: #e1e1e1;
-  }
-}
+    @include tablet {
+      bottom: 42px;
+    }
+    @include desktop {
+      bottom: 37px;
+      width: calc(100% - 32px);
+      transform: translateX(16px);
+    }
 
-.line {
-  position: relative;
-
-  @include desktop {
-    width: 1168px;
-    margin: 0 auto;
   }
 }
