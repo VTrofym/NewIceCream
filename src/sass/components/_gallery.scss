@@ -1,202 +1,224 @@
-// .parent__list {
-//   display: grid;
-//   grid-template-columns: repeat(6, 1fr);
-//   grid-template-rows: repeat(2, 1fr);
-//   grid-column-gap: 0px;
-//   grid-row-gap: 0px;
+.gallery {
+  background: linear-gradient($advantages-bkg 27px, $alternative-color 27px);
+  @include tablet {
+    background: linear-gradient($advantages-bkg 187px, $alternative-color 187px);
+  }
+  @include desktop {
+    background: linear-gradient($advantages-bkg 89px, $alternative-color 89px);
+  }
+}
 
-//   position: relative;
+.parent__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 
-//   @include desktop {
-//     padding: 0 94px;
-//   }
-// }
+  position: relative;
 
-// .box {
-//   width: 44px;
-//   height: 44px;
-//   border-radius: 8px;
-//   margin-right: 2px;
-//   margin-bottom: 2px;
+  margin-left: -20px;
+  margin-right: -20px;
 
-//   @include tablet {
-//     width: 105px;
-//     height: 105px;
-//     margin-right: 6px;
-//     margin-bottom: 6px;
-//     border-radius: 20px;
-//   }
+  @include tablet {
+      margin-left: -35px;
+      margin-right: -35px;
+  }
+  @include desktop {
+    padding: 0 94px;
+  }
+}
 
-//   @include desktop {
-//     width: 138px;
-//     height: 138px;
-//     margin-right: 8px;
-//     margin-bottom: 8px;
-//     border-radius: 20px;
-//   }
-// }
+.box {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 
-// .div1 {
-//   grid-area: 1 / 1 / 2 / 2;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(50%);
+  @include tablet {
+    width: 105px;
+    height: 105px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 20px;
+  }
 
-//   @include tablet {
-//     transform: translateY(-75%);
-//   }
+  @include desktop {
+    width: 138px;
+    height: 138px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+  }
+}
 
-//   @include desktop {
-//     transform: translateY(35%);
-//   }
-// }
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
 
-// .div2 {
-//   grid-area: 1 / 2 / 2 / 3;
+  @include tablet {
+    transform: translateY(105%);
+  }
 
-//   @include tablet {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     transform: translateY(-115%);
-//   }
+  @include desktop {
+    transform: translateY(105%);
+  }
+}
 
-//   @include desktop {
-//     transform: translateY(0%);
-//   }
-// }
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
 
-// .div3 {
-//   grid-area: 2 / 2 / 3 / 3;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-105%);
+  position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(61%);
 
-//   @include tablet {
-//     transform: translateY(-220%);
-//   }
+  @include tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(60%);
+  }
 
-//   @include desktop {
-//     transform: translateY(-106%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(64%);
+  }
+}
 
-// .div4 {
-//   grid-area: 1 / 3 / 2 / 4;
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-30%);
-//   width: 90px;
-//   height: 90px;
+.div3 {
+  grid-area: 2 / 2 / 3 / 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-46%);
 
-//   @include tablet {
-//     width: 215px;
-//     height: 215px;
-//     transform: translateY(-85%);
-//   }
+  @include tablet {
+    transform: translateY(-45%);
+  }
 
-//   @include desktop {
-//     width: 283px;
-//     height: 283px;
-//     transform: translateY(-25%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(-42%);
+  }
+}
 
-// .div5 {
-//   grid-area: 2 / 3 / 3 / 4;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-62%);
+.div4 {
+  grid-area: 1 / 3 / 2 / 4;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateY(-5%);
+  width: 90px;
+  height: 90px;
 
-//   @include tablet {
-//     transform: translateY(-175%);
-//   }
+  @include tablet {
+    width: 215px;
+    height: 215px;
+    transform: translateY(5%);
+  }
 
-//   @include desktop {
-//     transform: translateY(-53%);
-//   }
-// }
+  @include desktop {
+    width: 283px;
+    height: 283px;
+    transform: translateY(0%);
+  }
+}
 
-// .div6 {
-//   grid-area: 1 / 4 / 2 / 5;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(10%);
+.div5 {
+  grid-area: 2 / 3 / 3 / 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-10%);
 
-//   @include tablet {
-//     transform: translateY(-105%);
-//   }
+  @include tablet {
+    transform: translateY(10%);
+  }
 
-//   @include desktop {
-//     transform: translateY(5%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(0%);
+  }
+}
 
-// .div7 {
-//   grid-area: 2 / 4 / 3 / 5;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-95%);
+.div6 {
+  grid-area: 1 / 4 / 2 / 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(70%);
 
-//   @include tablet {
-//     transform: translateY(-212%);
-//   }
+  @include tablet {
+    transform: translateY(72%);
+  }
 
-//   @include desktop {
-//     transform: translateY(-102%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(72%);
+  }
+}
 
-// .div8 {
-//   grid-area: 1 / 5 / 2 / 6;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-25%);
+.div7 {
+  grid-area: 2 / 4 / 3 / 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-35%);
 
-//   @include tablet {
-//     transform: translateY(-132%);
-//   }
+  @include tablet {
+    transform: translateY(-32%);
+  }
 
-//   @include desktop {
-//     transform: translateY(-15%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(-32%);
+  }
+}
 
-// .div9 {
-//   grid-area: 2 / 5 / 3 / 6;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(-130%);
+.div8 {
+  grid-area: 1 / 5 / 2 / 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(45%);
 
-//   @include tablet {
-//     transform: translateY(-238%);
-//   }
+  @include tablet {
+    transform: translateY(44%);
+  }
 
-//   @include desktop {
-//     transform: translateY(-122%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(45%);
+  }
+}
 
-// .div10 {
-//   grid-area: 1 / 6 / 2 / 7;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(35%);
+.div9 {
+  grid-area: 2 / 5 / 3 / 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-58%);
 
-//   @include tablet {
-//     transform: translateY(-68%);
-//   }
+  @include tablet {
+    transform: translateY(-58%);
+  }
 
-//   @include desktop {
-//     transform: translateY(50%);
-//   }
-// }
+  @include desktop {
+    transform: translateY(-59%);
+  }
+}
+
+.div10 {
+  grid-area: 1 / 6 / 2 / 7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(115%);
+
+  @include tablet {
+    transform: translateY(108%);
+  }
+
+  @include desktop {
+    transform: translateY(110%);
+  }
+}
