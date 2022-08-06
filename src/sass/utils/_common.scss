@@ -73,6 +73,7 @@ img{
   text-decoration: none;
 
   background-color:$acent-color;
+  stroke: $alternative-color;
 
   border-radius: 22px;
   cursor: pointer;
@@ -80,11 +81,14 @@ img{
   &:hover, &:focus{
     background-color: $button-hover;
     color: $acent-color;
+    stroke: $acent-color;
   }
 }
 .button--light {
   background-color: $alternative-color;
   color: $acent-color;
+  stroke: $acent-color;
+  
 }
 .button-more{
   display: flex;
