@@ -4,11 +4,24 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #e179919a;
-    z-index: 999;
+    background: url('.././images/hero-modal-border.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 1000;
     overflow: hidden;
 }
 
-.is-hidden {}
-
-.hero-modal {}
+.hero-modal {
+    position: absolute;
+    top: center;
+    left: 300px ;
+    width: 600px;
+    height: 250px;
+}
+.hero-modal__close-button{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
