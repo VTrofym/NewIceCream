@@ -9,8 +9,8 @@
     }
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    width: 13px;
+.swiper-pagination-bullet {
+    width: 12px;
     height: 12px;
     border: none;
     border-radius: 50%;
@@ -25,7 +25,8 @@
     background-image: url(../images/customers_review/home.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    overflow: visible;
+    border-radius: 0;
+    background-color: transparent;
 }
 
  .swiper {
@@ -57,7 +58,7 @@
     height: 85px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 
     @include tablet{
         margin-bottom: 20px;
@@ -139,7 +140,7 @@
     
             @include tablet {
                 top: 20px;
-                left: 6px;
+                left: 20px;
                 width: 60px;
             }
     
