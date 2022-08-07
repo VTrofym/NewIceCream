@@ -75,7 +75,7 @@
 .customer__card{
     position: relative;
     height: 308px;
-    width: 280px;
+    width: 100%;
     // margin-bottom: 34px;
     padding: 72px 50px 19px 50px;
    
@@ -101,11 +101,9 @@
 }
 
 .customer__text{
-    position: absolute;
+    position: relative;
     z-index: 3;
-    top: 41px;
-    left: 65px;
-    width: 157px;
+    width: 100%;
     @include font(500, 12, 2.55, null, #000000);
     font-family: 'DM Sans';
     text-align: center;
@@ -125,16 +123,17 @@
 }
 
 .customer__gradient{
-    width: 180px;
-    height: 217px;
+    display: block;
+    width: 100%;
     margin: 0 auto;
    
-    background-image: repeating-linear-gradient(to bottom, #E1E1E1, #E1E1E1 1px, #FAFAFA 2px, #FAFAFA 30px);
+    background-image: repeating-linear-gradient(to bottom,#FAFAFA,  #FAFAFA 30px, #E1E1E1 30px, #E1E1E1 31px);
     &::before {
             content: '';
+            z-index: 2;
             position: absolute;
-            top: 28px;
-            left: 53px;
+            top: 61px;
+            left: 39px;
             height: 40px;
             width: 54px;
     
