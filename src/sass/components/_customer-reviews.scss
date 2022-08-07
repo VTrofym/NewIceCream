@@ -52,7 +52,11 @@
     -webkit-align-items: center;
     align-items: center;
 }
-
+.customer__border{
+    border-radius: 50%;
+    border: none;
+    overflow: hidden;
+}
 .customer__img{
     width: 85px;
     height: 85px;
