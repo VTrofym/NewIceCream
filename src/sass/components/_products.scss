@@ -36,11 +36,11 @@
     font-family: 'Titan One';
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 148px;
     
     @include tablet {
         @include font(null, 48px, 1.15, null, null);
-        margin-bottom: 20px;
+        margin-bottom: 158px;
     }
 
     @include desktop {
@@ -50,9 +50,9 @@
 
 .products__card{
     display: grid;
-    place-items: end center;
     text-align: center;
     width: 100%;
+    row-gap: 140px;
 
     @include tablet {
         grid-template-columns: 1fr 1fr 1fr;
@@ -68,42 +68,26 @@
 }
 
 .card__item{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    height: 629px;
-    width: 280px;
    
     @include tablet {
         width: 224px;
-        height: 611px;
     }
-    
     @include desktop {
         width: 368px;
-        height: 796px;
     }
-}
-
-.card__img{
-    position: relative;
-    height: 22%;
-    width: 100%;
-    @include desktop {
-            height: 25%;
-        }
-    @include tablet {
-            height: 33%;
-        }
 }
 
 .card__img--1{
     &::after {
         content: ' ';
         position: absolute;
-        top: 0;
+        top: -140px;
         left: 0;
         background-image: url(../images/products/card_img/card-img1-mob.png);
         background-repeat: no-repeat;
@@ -111,11 +95,15 @@
         width: 280px;
         height: 280px;
         z-index: 3;
+
+        left: 50%;
+        transform: translateX(-50%);
         @include retina {
             background-image: url(../images/products/card_img/card-img1-mob@2x.png);
         }
     
         @include tablet{
+            top: -138px;
             width: 224px;
             height: 224px;
             background-image: url(../images/products/card_img/card-img1-tab.png);
@@ -124,6 +112,7 @@
                 }
         }
         @include desktop{
+            top: -261px;
             width: 368px;
             height: 394px;
             background-image: url(../images/products/card_img/card-img1-desk.png);
@@ -138,7 +127,7 @@
     &::after {
         content: ' ';
         position: absolute;
-        top: 0;
+        top: -140px;
         left: 0;
         background-image: url(../images/products/card_img/card-img2-mob.png);
         background-repeat: no-repeat;
@@ -146,9 +135,12 @@
         width: 280px;
         height: 280px;
         z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
         @include retina{
         background-image: url(../images/products/card_img/card-img2-mob@2x.png);        }
         @include tablet {
+            top: -138px;
             width: 224px;
             height: 224px;
             background-image: url(../images/products/card_img/card-img2-tab.png);    
@@ -158,6 +150,7 @@
         }
     
         @include desktop {
+            top: -261px;
             width: 368px;
             height: 394px;
             background-image: url(../images/products/card_img/card-img2-desk.png);
@@ -173,7 +166,7 @@
     &::after {
         content: ' ';
         position: absolute;
-        top: 0;
+        top: -140px;
         left: 0;
         background-image: url(../images/products/card_img/card-img3-mob.png);
         background-repeat: no-repeat;
@@ -181,10 +174,13 @@
         width: 280px;
         height: 280px;
         z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
         @include retina {
             background-image: url(../images/products/card_img/card-img3-mob@2x.png);
         }
             @include tablet {
+                top: -138px;
                 width: 224px;
                 height: 224px;
                 background-image: url(../images/products/card_img/card-img3-tab.png);
@@ -194,6 +190,7 @@
             }
                 
             @include desktop {
+                top: -261px;
                 width: 368px;
                 height: 394px;
                 background-image: url(../images/products/card_img/card-img3-desk.png);    
@@ -208,11 +205,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 160px 40px 40px;
-    width: 100%;
-    width: 280px;
-    height: 489px;
     border-radius: 24px;
 
     @include tablet {
