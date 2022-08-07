@@ -84,7 +84,8 @@
 }
 // Header modal button
 .header__button {
-@include only-mobile{
   display: none;
+  @include tablet{
+    display: flex;
   }
 }
