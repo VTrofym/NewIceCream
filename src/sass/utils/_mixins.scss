@@ -35,3 +35,12 @@
   transition-duration: $transition-time;
   transition-timing-function: $transition-function;
 }
+
+@mixin retina {
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    @content;
+  }
+}
