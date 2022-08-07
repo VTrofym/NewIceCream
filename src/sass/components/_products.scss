@@ -250,32 +250,27 @@
     font-family: 'Titan One';
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 70px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template: 1fr 6px /1fr;
+    row-gap: 32px;
    
-    &::after{
-        content:'...';
+    &::after {
+        content: '\2022 \2022 \2022';
         display: flex;
-        position: absolute;
-        z-index: 4;
         top: 215px;
         left: 127px;
-        height: 5px;
+        letter-spacing: 4px;
+        height: 6px;
         flex-direction: column;
         justify-content: center;
-        @include tablet {
-            top: 173px;
-            left: 99px;
-        }
-        @include desktop {
-            top: 231px;
-            left: 171px;
-        }
     }
     
     @include desktop {
         @include font(null, 30px, 1.13, null, null);
     }
 }
+
 
 .card__after-title{
     @include font(700, 14px, 1.52, 0.04em, $alternative-color);
