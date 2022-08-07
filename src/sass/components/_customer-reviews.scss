@@ -1,6 +1,9 @@
 .customer{
     background-color: $alternative-color;
     padding-top: 60px;
+    @include desktop{
+        padding-top: 120px;
+    }
 }
 .customer__wrapper{
     margin-bottom: 32px;
