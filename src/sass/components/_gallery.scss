@@ -1,0 +1,88 @@
+.gallery {
+  background: linear-gradient($advantages-bkg 27px, $alternative-color 27px);
+  @include tablet {
+    background: linear-gradient($advantages-bkg 187px, $alternative-color 187px);
+  }
+  @include desktop {
+    background: linear-gradient($advantages-bkg 89px, $alternative-color 89px);
+  }
+}
+.gallery__list {
+  display: grid;
+  max-width: 480px;
+  grid-template: repeat(15, auto)/repeat(7, 1fr);
+  gap: 2px;
+  margin-left: -20px;
+  margin-right: -20px;
+  @include tablet {
+      max-width: none;
+      margin-left: -35px;
+      margin-right: -35px;
+      width: 768px;
+      gap: 6px;
+  }
+  @include desktop {
+    padding: 0 94px;
+    width: 1200px;
+    height: 430px;
+    gap: 8px;
+  }
+}
+
+.gallery__item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 250ms linear;
+  &:hover {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+
+  @include tablet {
+    border-radius: 20px;
+  }
+}
+
+.gallery__item--first {
+  grid-area: 5 / 1 / 13 / 2;
+}
+
+.gallery__item--second {
+  grid-area: 3 / 2 / 9 / 3;
+}
+
+.gallery__item--third {
+  grid-area: 9 / 2 / 16 / 3;
+}
+
+.gallery__item--fourth {
+  grid-area: 1 / 3 / 13 / 5;
+  &:hover {
+      transform: scale(1.3);
+      z-index: 1;
+    }
+}
+
+.gallery__item--fifth {
+    grid-area: 13 / 3 / 18 / 4;
+}
+
+.gallery__item--sixth {
+    grid-area: 4 / 5 / 11 / 6;
+}
+
+.gallery__item--seventh {
+  grid-area: 11 / 5 / 17 / 6;
+}
+
+.gallery__item--eighth {
+  grid-area: 2 / 6 / 7 / 7;
+}
+
+.gallery__item--ninth {
+  grid-area: 7 / 6 / 15 / 7;
+}
+
+.gallery__item--tenth {
+    grid-area: 6 / 7 / 14 / 8;
+}

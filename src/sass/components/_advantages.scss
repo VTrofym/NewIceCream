@@ -1,5 +1,124 @@
+@mixin before($without, $ib, $w, $h, $tr, $c, $mb) {
+  content: $without;
+  display: $ib;
+  width: $w;
+  height: $h;
+  background-color: $tr;
+  background-size: $c;
+  margin-bottom: $mb;
+}
+
 .advantages {
-    background-color: aqua;
-    width: 100px;
-    height: 100px;
+  background-color: $advantages-bkg;
+  padding: 40px 0px 60px;
+
+  @include tablet {
+    padding: 60px 0px 64px;
+  }
+  @include desktop {
+    padding: 121px 0px 120px;
+  }
+}
+
+.advantages__list {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+.advantages__indicators {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  }
+  @include tablet {
+    gap: 15px;
+  }
+}
+
+.advantages__indicators--liters::before {
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-1-2x.png);
+  @include before('', inline-block, 33px, 50px, transparent, contain, 16px);
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__indicators--apples::before {
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-2-2x.png);
+  @include before('', inline-block, 50px, 50px, transparent, contain, 16px);
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__indicators--hearts::before {
+  background-image: url(../images/advantages.png/mobile2x/advantages.mob-3-2x.png);
+  stroke: #ffa5ba;
+  fill: #ffa5ba;
+  @include before('', inline-block, 44px, 50px, transparent, contain, 16px);
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__amount {
+  font-family: 'Titan One';
+  font-style: normal;
+
+  @include font(400, 36px, 1.14, 0.04em, #d41443);
+
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 13px;
+
+    font-size: 48px;
+    line-height: 1.14;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.14;
+
+    margin-bottom: 16px;
+  }
+}
+
+.advantages__quality {
+  width: 230px;
+  font-family: 'DM Sans';
+  font-style: normal;
+
+  @include font(700, 12px, 1.7, null, #000000);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @include desktop {
+    width: 288px;
+    @include font(null, 16px, 1.76, 0.02, null);
+  }
 }
