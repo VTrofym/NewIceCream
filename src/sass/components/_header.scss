@@ -54,7 +54,7 @@
   @include desktop {
     font-family: $primary-font;
     text-decoration: none;
-    @include font(700, 16px, (21 / 16), null, inherit);
+    @include font(700, 16px, 1.3, null, inherit);
     @include transition (color);
   &:hover,&:focus {
     color: $acent-color
