@@ -1,25 +1,6 @@
 .about {
-    background-image: url('.././images/about-bg-mob.png');
-        background-repeat: no-repeat;
-        background-size: 480px;
-        background-position: center 594px;
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-        background-image: url('.././images/about-bg-mob@2x.png');
-    }
-        @media screen and (min-width: 768px) {
-            background-image: none;
-        }
-        @media screen and (min-width: 1200px) {
-            max-width: 100%;
-            background-image: url('.././images/about-bg-desk.png');
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            background-image: url('.././images/about-bg-desk@2x.png');
-            }
-        }
+
+    
     //     
     padding-top: 60px;
     // padding-bottom: 40px;
@@ -32,6 +13,35 @@
     // padding-top: px;
     // padding-bottom: px;
     // }
+}
+.about__wrap{
+    position: relative;
+        background-image: url('.././images/about-bg-mob.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0 80%;
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('.././images/about-bg-mob@2x.png');
+            }
+        
+            @media screen and (min-width: 768px) {
+                background-image: none;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                background-image: url('.././images/about-bg-desk.png');
+        
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-size: contain;
+                    background-position: center;
+                    background-image: url('.././images/about-bg-desk@2x.png');
+                }
+            }
 }
 
 .about__text {
@@ -85,16 +95,22 @@
 }
 
 .about__img {
+    
 //     margin-bottom: 40px;
     width:280px;
     height:279px;
     @media screen and (min-width: 768px) {
     width: 336px;
     height: 335px;
+    position: absolute;
+    top: 201px;
+    left: 32px;
     }
      @media screen and (min-width: 1200px) {
     width: 501px;
     height: 501px;
+    top: 236px;
+    left: 16px;
     }
 }
 
@@ -109,6 +125,8 @@
     @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.79;
+        margin-left: auto;
+        max-width: 334px;
     }
     @media screen and (min-width: 1200px) {
     margin-bottom: 32px;
@@ -118,7 +136,6 @@
 }
 
 .about__text-after {
-    position: relative;
     margin-bottom: 20px;
     font-family: $primary-font;
     font-size: 12px;
@@ -127,6 +144,8 @@
     background-color: transparent;
     
     @media screen and (min-width: 768px) {
+    max-width: 334px;
+    margin-left: auto;
     margin-bottom: 40px;
     font-size: 14px;
     line-height: 1.79;
@@ -168,6 +187,8 @@
 // }
 
 .about__button {
+    margin-left: auto;
+    margin-right: 192px;
     color: $acent-color;
     background-color: $alternative-color;
 }
