@@ -1,14 +1,120 @@
 .hero-modal__backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #e179919a;
-    z-index: 999;
-    overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(144, 196, 252, 0.459);
+  @media screen and (min-width:1200px) {
+    background: url('.././images/hero-modal/hero-modal-border.png'),rgba(144, 196, 252, 0.742);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  z-index: 1000;
+  overflow-y: auto;
+  transform: scale(1);
+  @include transition (opacity transform);
+  &.is-hidden{
+    transform: scale(1.1);
+  }
+}
+.hero-modal {
+  padding: 50px 40px;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 280px;
+  height: 500px;
+  background: url('.././images/hero-modal/hero-modal.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1) translate(-50%, 50%);
+  @include transition (transform);
+  .hero-modal__backdrop.is-hidden &{
+    transform: translate(-50%, 50%) scale(0.8);
+ 
+  }
 }
 
-.is-hidden {}
 
-.hero-modal {}
+.hero-modal__close-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill:rgb(239, 139, 155);
+  right: -25px;
+  top: -25px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  @include transition (fill);
+  &:hover,:focus{
+    fill: $acent-color;
+  }
+}
+
+.hero-modal__title{
+  margin-bottom: 45px;
+  text-align: center;
+  font-family: $second-font;
+  @include font(700, 36px, 1.5, 0.04em, $acent-color);
+}
+.hero-modal__label{
+  & em{
+    font-style: normal;
+  }
+  display: block;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-family: $primary-font;
+  @include font(400, 16px, 1.8, 0.04em, $primary-color);
+}
+.hero-modal__number{
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+
+  color: $acent-color;
+  font-size: 20px;
+
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid $alternative-color;
+  @include transition (outline);
+  &:focus-within{
+  border-color: transparent;
+  outline: 2px solid $acent-color;
+
+  &::placeholder {
+    color: #fff;
+  }
+  }
+}
+
+.hero-modal__submit-button{
+  display: block;
+  width: 100px;
+  height: 40px;
+  padding: 5px 15px;
+  margin: 0 auto;
+
+  background-color: $alternative-color;
+  @include font(700, 14px, 1.2, 0.04em, $acent-color);
+  text-transform: capitalize;
+  background: #FFFFFF;
+  border-radius: 22px;
+  @include transition (color background-color);
+  &:hover,:focus{
+    background-color: $acent-color;
+    color: $alternative-color;
+  }
+}
