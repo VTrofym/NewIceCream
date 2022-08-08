@@ -5,15 +5,15 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(144, 196, 252, 0.459);
+  z-index: 1000;
+  overflow-y: auto;
+  transform: scale(1);
   @media screen and (min-width:1200px) {
     background: url('.././images/hero-modal/hero-modal-border.png'),rgba(144, 196, 252, 0.742);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
-  z-index: 1000;
-  overflow-y: auto;
-  transform: scale(1);
   @include transition (opacity transform);
   &.is-hidden{
     transform: scale(1.1);
@@ -22,9 +22,9 @@
 .hero-modal {
   padding: 50px 40px;
   position: fixed;
-  bottom: 50%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   width: 280px;
   height: 500px;
   background: url('.././images/hero-modal/hero-modal.png');
