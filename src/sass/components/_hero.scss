@@ -191,15 +191,16 @@ padding: 8px 0;
 @include tablet{
   .hero__text{
     @include font(400, 8px, 1.5, null, null);
+    transition: transform 500ms linear;
     @include desktop {
       font-size: 14px;
       line-height: 1.43;
     }
   }
   .hero__text--face{
-    transform: translateX(-100%);
+    transform: translateX(0);
     .hero__description.roll & {
-      transform: translateX(0);
+      transform: translateX(100%);
     }
   }
   .hero__text--back{
@@ -217,17 +218,25 @@ padding: 8px 0;
 .hero__button-more{
   display: none;
   @include tablet {
+    
     display: flex;
     grid-row: 4;
     grid-column: 2;
 
     margin-top: 7px;
     margin-left: -10px;
+    transition: transform 500ms linear;
+    .hero__description.roll+&{
+      transform:translateX(110px) rotate(180deg) ;
+    }
   }
   @include desktop {
     width: 26px;
     height: 26px;
     margin-top: 20px;
+    .hero__description.roll+& {
+      transform: translateX(170px) rotate(180deg);
+    }
   }
 }
 
