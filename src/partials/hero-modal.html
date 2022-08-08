@@ -6,19 +6,19 @@
       </svg>
     </button>
     <div class="modal__wrap">
-      <h2 class="hero-modal__title">You whant it!</h2>
+      <h2 class="hero-modal__title">You want it!</h2>
       <form class="hero-modal__form">
         <label class="hero-modal__label" for="customer-number"
-          >Just leave your number and we will call you back soon
-        </label>
+          >Just leave your number and we will call you back soon</label
+        >
         <input
           class="hero-modal__number"
           type="tel"
           required
-          autofocus
           value="+380"
           name="customer-number"
           id="customer-number"
+          minlength="11"
           placeholder="+380XXXXXXXXX"
         />
         <button class="hero-modal__submit-button" type="submit">

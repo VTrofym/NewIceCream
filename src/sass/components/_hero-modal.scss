@@ -1,23 +1,19 @@
 .hero-modal__backdrop {
   position: fixed;
+  top: 0;
   bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
   background-color: rgba(144, 196, 252, 0.459);
   z-index: 1000;
   overflow-y: auto;
-  transform: scale(1);
   @media screen and (min-width:1200px) {
-    background: url('.././images/hero-modal/hero-modal-border.png'),rgba(144, 196, 252, 0.742);
+    background: url('.././images/hero-modal/hero-modal-border.png'),#ee94a99a;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   @include transition (opacity transform);
-  &.is-hidden{
-    transform: scale(1.1);
-  }
 }
 .hero-modal {
   position: fixed;
@@ -34,13 +30,19 @@
   }
 }
 .modal__wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background:
-    linear-gradient(#ee94a99a, #e179919a),url('.././images/hero-modal/hero-modal.png');
+    linear-gradient(#ee94a99a, #ee94a99a),url('.././images/hero-modal/hero-modal.png');
   background-repeat: no-repeat;
   background-size: cover;
+
   border-radius: 40px;
+
   overflow: hidden;
   padding: 25px 20px;
+
   @include tablet {
   border-radius: 58px;
   padding: 50px 40px;
@@ -52,20 +54,25 @@
 
 .hero-modal__close-button {
   position: absolute;
+  right: -10px;
+  top: -10px;
+
+  width: 25px;
+  height: 25px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  fill:rgb(239, 139, 155);
-  right: -10px;
-  top: -10px;
-  width: 25px;
-  height: 25px;
+  
+  fill: rgb(239, 139, 155);
   background-color: #fff;
   border-radius: 50%;
+
   cursor: pointer;
   @include tablet {
     width: 40px;
     height: 40px;
+
     right: -20px;
     top: -20px;
   }
@@ -76,15 +83,12 @@
 }
 
 .hero-modal__title{
-  margin-bottom: 20px;
   text-align: center;
   font-family: $second-font;
-  @include font(700, 20px, 1.5, 0.04em, $acent-color);
+  @include font(700, 20px, null, 0.04em, $acent-color);
 
   @include tablet {
     margin-bottom: 45px;
-    text-align: center;
-    font-family: $second-font;
     font-size: 36px;
   }
 }
@@ -104,7 +108,7 @@
   margin: 0 auto;
   text-align: center;
   font-family: $primary-font;
-  @include font(500, 16px, 1.8, 0.04em, $alternative-color);
+  @include font(500, 16px, null, 0.04em, $alternative-color);
 }
 .hero-modal__number{
   display: block;
@@ -145,10 +149,13 @@
   cursor: pointer;
 
   background-color: $alternative-color;
-  @include font(700, 14px, 1.2, 0.04em, $acent-color);
+  @include font(700, 14px, 1, null, $acent-color);
   text-transform: capitalize;
   background: #FFFFFF;
   border-radius: 22px;
+  @include tablet {
+    
+  }
   @include transition (color background-color);
   &:hover,&:focus{
     background-color: $acent-color;
