@@ -5,13 +5,13 @@
         padding-top: 120px;
     }
 }
-.customer__wrapper{
-    margin-bottom: 32px;
+.customer__wraper{
+    padding-bottom: 28px;
     @include tablet{
-        margin-bottom: 48px;
+        padding-bottom: 44px;
     }
 }
-
+.swiper-horizontal>.swiper-pagination-bullets{bottom: 0;}
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -77,19 +77,16 @@
 
 .customer__card{
     position: relative;
-    height: 308px;
     width: 100%;
     padding: 41px 50px 19px 50px;
     background-color: #FAFAFA;
 
     @include tablet{
         width: 620px;
-        height: 164px;
         padding: 37px 6px 36px;
     }
     @include desktop {
         width: 968px;
-        height: 138px;
         padding: 32px 74px 28px 72px;
     }
 }
@@ -161,13 +158,11 @@
 
 .customer__location{
     margin-top: 14px;
-    // margin-bottom: 16px;
     font-family: 'DM Sans';
     @include font(500, 14, 1.86, null, #000000);
     text-align: center;
     display: grid;
     grid-template: 20px 1fr / 1fr;
-    
 
     &::before {
             content: '\2022 \2022 \2022';
@@ -184,7 +179,6 @@
 
     @include tablet{
         margin-top: 4px;
-        margin-bottom: 32px;
         @include font(null, 16, null, null, null);
     }
 
@@ -192,6 +186,5 @@
         margin-top: 16px;
         @include font(null, 20, null, null, null);
     }
-    
 }
 
