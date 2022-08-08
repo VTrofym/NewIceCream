@@ -160,7 +160,7 @@
 }
 
 .customer__location{
-    margin-top: 32px;
+    margin-top: 14px;
     // margin-bottom: 16px;
     font-family: 'DM Sans';
     @include font(500, 14, 1.86, null, #000000);
@@ -183,13 +183,13 @@
         }
 
     @include tablet{
-        margin-top: 40px;
+        margin-top: 4px;
         margin-bottom: 32px;
         @include font(null, 16, null, null, null);
     }
 
     @include desktop{
-        margin-top: 47px;
+        margin-top: 16px;
         @include font(null, 20, null, null, null);
     }
     
