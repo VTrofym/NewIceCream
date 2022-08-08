@@ -15,6 +15,28 @@
 }
 // Menu sidebar
 .burger {
+      overflow-y: auto;
+    
+      &::-webkit-scrollbar {
+        width: 5px;
+        transform: translateX(-5px);
+      }
+    
+    
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+    
+    
+      &::-webkit-scrollbar-thumb {
+        @include transition(background-color);
+        background-color: #FFB8CA;
+        border-radius: 10px;
+      }
+    
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $acent-color;
+      }
   position: absolute;
   top: 0;
   right: 0;
