@@ -48,14 +48,12 @@
 }
 
 .hero__bg--icecream {
-  top: 92px;
+  bottom: 0;
   left: 97px;
   @include tablet {
-    top: 80px;
     left: 322px;
   }
   @include desktop{
-    top: 107px;
     left: 634px;
   }
 }
@@ -115,14 +113,13 @@
 
   }
 }
-
 // Title acent
 .hero__title--acent {
   display: block;
   padding: 0;
   margin: 0;
   display: block;
-  @include font(null, 48px, 1.16, null, $acent-color);
+  @include font(null, 48px, 0.9, null, $acent-color);
   @include tablet {
     font-size: 34px;
   }
@@ -167,25 +164,55 @@ padding: 8px 0;
   }
 }
 // Text
-.hero__text{
+.hero__description{
   display: none;
   @include tablet{
-    font-family: $primary-font;
+    position: relative;
     display: block;
+
     grid-row: 3;
     grid-column: 2;
 
+    font-family: $primary-font;
+
+    overflow: hidden;
     margin-top: 61px;
     margin-left: -10px;
     @include font(400, 8px, 1.5, null, null);
     width: 120px;
     @include desktop {
+      margin-top: 108px;
       width: 200px;
       font-size: 14px;
       line-height: 1.43;
     }
   }
 }
+@include tablet{
+  .hero__text{
+    @include font(400, 8px, 1.5, null, null);
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+  }
+  .hero__text--face{
+    transform: translateX(-100%);
+    .hero__description.roll & {
+      transform: translateX(0);
+    }
+  }
+  .hero__text--back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    .hero__description.roll &{
+      transform: translateX(0);
+    }
+  }
+}
+
 // Button more text button
 .hero__button-more{
   display: none;

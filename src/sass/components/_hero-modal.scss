@@ -9,7 +9,7 @@
   overflow-y: auto;
   transform: scale(1);
   @media screen and (min-width:1200px) {
-    background: url('.././images/hero-modal/hero-modal-border.png'),rgba(144, 196, 252, 0.742);
+    background: url('.././images/hero-modal/hero-modal-border.png'),#c2ebf0cf;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -34,13 +34,20 @@
   }
 }
 .modal__wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background:
     linear-gradient(#ee94a99a, #e179919a),url('.././images/hero-modal/hero-modal.png');
   background-repeat: no-repeat;
   background-size: cover;
+
   border-radius: 40px;
+
   overflow: hidden;
   padding: 25px 20px;
+
   @include tablet {
   border-radius: 58px;
   padding: 50px 40px;
@@ -52,20 +59,25 @@
 
 .hero-modal__close-button {
   position: absolute;
+  right: -10px;
+  top: -10px;
+
+  width: 25px;
+  height: 25px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  fill:rgb(239, 139, 155);
-  right: -10px;
-  top: -10px;
-  width: 25px;
-  height: 25px;
+  
+  fill: rgb(239, 139, 155);
   background-color: #fff;
   border-radius: 50%;
+
   cursor: pointer;
   @include tablet {
     width: 40px;
     height: 40px;
+
     right: -20px;
     top: -20px;
   }
@@ -76,15 +88,12 @@
 }
 
 .hero-modal__title{
-  margin-bottom: 20px;
   text-align: center;
   font-family: $second-font;
   @include font(700, 20px, 1.5, 0.04em, $acent-color);
 
   @include tablet {
     margin-bottom: 45px;
-    text-align: center;
-    font-family: $second-font;
     font-size: 36px;
   }
 }
@@ -149,6 +158,9 @@
   text-transform: capitalize;
   background: #FFFFFF;
   border-radius: 22px;
+  @include tablet {
+    
+  }
   @include transition (color background-color);
   &:hover,&:focus{
     background-color: $acent-color;
