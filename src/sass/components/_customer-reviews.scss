@@ -79,18 +79,18 @@
     position: relative;
     height: 308px;
     width: 100%;
-    padding: 72px 50px 19px 50px;
+    padding: 41px 50px 19px 50px;
     background-color: #FAFAFA;
 
     @include tablet{
         width: 620px;
         height: 164px;
-        padding: 68px 6px 36px;
+        padding: 37px 6px 36px;
     }
     @include desktop {
         width: 968px;
         height: 138px;
-        padding: 32px 74px 31px 72px;
+        padding: 32px 74px 28px 72px;
     }
 }
 
@@ -98,18 +98,18 @@
     position: relative;
     z-index: 3;
     width: 100%;
+    
     @include font(500, 12, 2.55, null, #000000);
     font-family: 'DM Sans';
     text-align: center;
 
     @include tablet{
-        margin: 0 auto;
         width: 514px;
         @include font(null, 14, 2.16, 0.04em, null);
     }
 
     @include desktop{
-        margin: 0 auto; 
+        
         width: 750px;
         @include font(null, 16, 1.86, 0.04em, null);
         
@@ -120,13 +120,15 @@
     padding-bottom: 3px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
     background-image: repeating-linear-gradient(to bottom,#FAFAFA,  #FAFAFA 30px, #E1E1E1 30px, #E1E1E1 31px);
     &::before {
             content: '';
             z-index: 2;
             position: absolute;
-            top: 61px;
-            left: 39px;
+            top: 28px;
+            left: 53px;
             height: 40px;
             width: 54px;
     
@@ -135,8 +137,8 @@
             background-size: cover;
     
             @include tablet {
-                top: 42px;
-                left: 12px;
+                top: 20px;
+                left: 6px;
                 width: 60px;
             }
     
@@ -149,27 +151,30 @@
 
     @include tablet{
         width: 608px;
+        padding-left: 51px;
     }
     @include desktop{
         width: 822px; 
+        padding-left: 36px;
     }
 }
 
 .customer__location{
-    margin-top: 14px;
-    margin-bottom: 16px;
+    margin-top: 32px;
+    // margin-bottom: 16px;
     font-family: 'DM Sans';
     @include font(500, 14, 1.86, null, #000000);
     text-align: center;
     display: grid;
-    grid-template: 1fr 16px /1fr;
-    row-gap: 16px;
+    grid-template: 20px 1fr / 1fr;
+    
 
     &::before {
             content: '\2022 \2022 \2022';
             display: flex;
             top: 215px;
             left: 127px;
+            
             letter-spacing: 4px;
             height: 4px;
             flex-direction: column;
@@ -178,12 +183,13 @@
         }
 
     @include tablet{
+        margin-top: 40px;
         margin-bottom: 32px;
         @include font(null, 16, null, null, null);
     }
 
     @include desktop{
-        
+        margin-top: 47px;
         @include font(null, 20, null, null, null);
     }
     
