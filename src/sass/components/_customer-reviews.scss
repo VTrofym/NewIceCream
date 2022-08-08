@@ -1,6 +1,9 @@
 .customer{
     background-color: $alternative-color;
-    padding: 60px 0px;
+    padding-top: 60px;
+    @include desktop{
+        padding-top: 120px;
+    }
 }
 .customer__wrapper{
     margin-bottom: 32px;
@@ -76,50 +79,37 @@
     position: relative;
     height: 308px;
     width: 100%;
-    min-width: 280px;
-   
     padding: 72px 50px 19px 50px;
-   
-    // padding: 43px 58px 26px 65px;
     background-color: #FAFAFA;
 
     @include tablet{
         width: 620px;
         height: 164px;
-        // margin-bottom: 34px;
         padding: 68px 6px 36px;
-        // padding: 37px 55px 44px 51px;
-
     }
     @include desktop {
-
         width: 968px;
         height: 138px;
-        // margin-bottom: 36px;
-        padding: 76px 74px 31px 72px;
-        // padding: 47px 109px 39px 109px;
+        padding: 32px 74px 31px 72px;
     }
 }
 
 .customer__text{
-    position: absolute;
-    // position: relative;
+    position: relative;
     z-index: 3;
-    top: 41px;
-    left: 65px;
-    width: 157px;
+    width: 100%;
     @include font(500, 12, 2.55, null, #000000);
     font-family: 'DM Sans';
     text-align: center;
 
     @include tablet{
+        margin: 0 auto;
         width: 514px;
         @include font(null, 14, 2.16, 0.04em, null);
     }
 
     @include desktop{
-        top: 47px;
-        left: 109px;
+        margin: 0 auto; 
         width: 750px;
         @include font(null, 16, 1.86, 0.04em, null);
         
@@ -127,23 +117,16 @@
 }
 
 .customer__gradient{
-    display: block;
-    // width: 180px;
-    // height: 217px;
-    min-width: 180px;
+    padding-bottom: 3px;
     width: 100%;
-    max-height: 217px;
-    height: 100%;
     margin: 0 auto;
-   
-    background-image: repeating-linear-gradient(to bottom, #E1E1E1, #E1E1E1 1px, #FAFAFA 2px, #FAFAFA 30px);
+    background-image: repeating-linear-gradient(to bottom,#FAFAFA,  #FAFAFA 30px, #E1E1E1 30px, #E1E1E1 31px);
     &::before {
             content: '';
+            z-index: 2;
             position: absolute;
-            top: 28px;
-            left: 53px;
-            // top: 61px;
-            // left: 39px;
+            top: 61px;
+            left: 39px;
             height: 40px;
             width: 54px;
     
@@ -152,13 +135,13 @@
             background-size: cover;
     
             @include tablet {
-                top: 20px;
-                left: 20px;
+                top: 42px;
+                left: 12px;
                 width: 60px;
             }
     
             @include desktop {
-                top: 32px;
+                top: 16px;
                 left: 72px;
                 width: 54px; 
             }
@@ -166,11 +149,9 @@
 
     @include tablet{
         width: 608px;
-        height: 62px;
     }
     @include desktop{
-        width: 822px;
-        height: 33px;   
+        width: 822px; 
     }
 }
 

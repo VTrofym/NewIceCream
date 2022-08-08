@@ -69,7 +69,7 @@ img{
   padding: 11px 37px;
 
   font-family: $primary-font;
-  @include font (700,16px,(21 / 16),null,$primary-color);
+  @include font (700,16px,1.31,null,$primary-color);
   text-decoration: none;
 
   background-color:$acent-color;
@@ -78,17 +78,18 @@ img{
   border-radius: 22px;
   cursor: pointer;
   @include transition (background-color color);
-  &:hover, &:focus{
-    background-color: $button-hover;
-    color: $acent-color;
-    stroke: $acent-color;
-  }
+  
 }
 .button--light {
   background-color: $alternative-color;
   color: $acent-color;
-  stroke: $acent-color;
-  
+  stroke: $acent-color;  
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+    color: $acent-color;
+    stroke: $acent-color;
+  }
 }
 .button-more{
   display: flex;

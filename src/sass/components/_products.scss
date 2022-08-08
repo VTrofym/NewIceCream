@@ -1,0 +1,285 @@
+.products{
+    background-color: $alternative-color;
+}
+
+.products__wrapper{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop{
+        padding-top: 61px;
+    }
+
+}
+
+.products__pre-title{
+    font-family: 'Titan One';
+    @include font(400, 18px, 1.17, null, #FFA5BA);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet{
+        @include font(null, 26px, 1.15, null, null); 
+        margin-bottom: 18px;
+    }
+
+    @include desktop {
+        @include font(null, 30px, 1.13, 0.04em, null);
+        margin-bottom: 16px;
+    }
+}
+
+.products__title{
+    @include font(400, 34px, 1.15, 0.04em, $acent-color);
+    font-family: 'Titan One';
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 148px;
+    
+    @include tablet {
+        @include font(null, 48px, 1.15, null, null);
+        margin-bottom: 158px;
+    }
+
+    @include desktop {
+         @include font(null, 58px, 1.14, 0.06em, null);
+    }   
+}
+
+.products__card{
+    display: grid;
+    text-align: center;
+    width: 100%;
+    row-gap: 140px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: calc((100% - 32px) / 3);
+        grid-column-gap: 16px;
+    }
+    
+     @include desktop {
+        width: calc((100% - 64px) / 3);
+        grid-column-gap: 32px;
+    }
+}
+
+.card__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+   
+    @include tablet {
+        width: 224px;
+    }
+    @include desktop {
+        width: 368px;
+    }
+}
+
+.card__img--1{
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: -140px;
+        left: 0;
+        background-image: url(../images/products/card_img/card-img1-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 280px;
+        z-index: 3;
+
+        left: 50%;
+        transform: translateX(-50%);
+        @include retina {
+            background-image: url(../images/products/card_img/card-img1-mob@2x.png);
+        }
+    
+        @include tablet{
+            top: -138px;
+            width: 224px;
+            height: 224px;
+            background-image: url(../images/products/card_img/card-img1-tab.png);
+            @include retina {
+                background-image: url(../images/products/card_img/card-img1-tab@2x.png);
+                }
+        }
+        @include desktop{
+            top: -261px;
+            width: 368px;
+            height: 394px;
+            background-image: url(../images/products/card_img/card-img1-desk.png);
+            @include retina {
+                    background-image: url(../images/products/card_img/card-img1-desk@2x.png);
+                }
+        }
+    }
+}
+
+.card__img--2 {
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: -140px;
+        left: 0;
+        background-image: url(../images/products/card_img/card-img2-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 280px;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        @include retina{
+        background-image: url(../images/products/card_img/card-img2-mob@2x.png);        }
+        @include tablet {
+            top: -138px;
+            width: 224px;
+            height: 224px;
+            background-image: url(../images/products/card_img/card-img2-tab.png);    
+            @include retina {
+            background-image: url(../images/products/card_img/card-img2-tab@2x.png);
+            }
+        }
+    
+        @include desktop {
+            top: -261px;
+            width: 368px;
+            height: 394px;
+            background-image: url(../images/products/card_img/card-img2-desk.png);
+            @include retina {
+            background-image: url(../images/products/card_img/card-img2-desk@2x.png);
+            }
+        }
+    }
+  
+}
+
+.card__img--3 {
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: -140px;
+        left: 0;
+        background-image: url(../images/products/card_img/card-img3-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 280px;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        @include retina {
+            background-image: url(../images/products/card_img/card-img3-mob@2x.png);
+        }
+            @include tablet {
+                top: -138px;
+                width: 224px;
+                height: 224px;
+                background-image: url(../images/products/card_img/card-img3-tab.png);
+                @include retina {
+                    background-image: url(../images/products/card_img/card-img3-tab@2x.png);
+                }
+            }
+                
+            @include desktop {
+                top: -261px;
+                width: 368px;
+                height: 394px;
+                background-image: url(../images/products/card_img/card-img3-desk.png);    
+                @include retina {
+                    background-image: url(../images/products/card_img/card-img3-desk@2x.png);
+                                    }
+            }
+    }
+}
+
+.card__bg{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 160px 40px 40px;
+    border-radius: 24px;
+
+    @include tablet {
+        height: 473px;
+        width: 224px;
+        padding: 118px 40px 32px;
+    }
+    
+    @include desktop {
+        height: 535px;
+        width: 368px;
+        padding: 165px 60px 61px;
+    }
+}
+
+.card__bg--1{
+    background-color: $hero-bkg-color;
+}
+
+.card__bg--2{
+    background-color: #F0D1A5;
+
+}
+
+.card__bg--3{
+    background-color: #C2E297;
+
+}
+
+.card__title{
+    @include font(400, 20px, 1.15, 0.04em, $alternative-color);
+    font-family: 'Titan One';
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template: 1fr 6px /1fr;
+    row-gap: 32px;
+   
+    &::after {
+        content: '\2022 \2022 \2022';
+        display: flex;
+        top: 215px;
+        left: 127px;
+        letter-spacing: 4px;
+        height: 6px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    @include desktop {
+        @include font(null, 30px, 1.13, null, null);
+    }
+}
+
+
+.card__after-title{
+    @include font(700, 14px, 1.52, 0.04em, $alternative-color);
+    font-family: 'DM Sans';
+    text-align: center;
+    margin-bottom: 32px;
+    @include tablet {
+    line-height:1.76;
+    }
+    
+    @include desktop {
+    font-size: 16px;
+    margin-bottom: 60px;
+    }
+}
+
+.card__btn{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    flex-shrink: 0;
+}

@@ -11,10 +11,6 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
     }
 }
 
-.contacts__title {
-    display: none;
-}
-
 .contacts__section {
     display: flex;
     flex-direction: column;
@@ -37,7 +33,7 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
 }
  
 .contacts__list {
-    max-width: 280px;
+    max-width: 440px;
     width: 100%;
     padding: 40px 32px;
     margin: 0 auto 20 auto;
@@ -123,7 +119,6 @@ background: linear-gradient(#fff 362px, #FFF5F6 362px);
 .contacts__city {
     margin-bottom: 8px;
     font-family: $primary-font;
-    font-style: 500;
     font-size: 12px;
     line-height: 1.83;
     @media screen and (min-width:768px) {

@@ -10,13 +10,13 @@
 
 .advantages {
   background-color: $advantages-bkg;
-  padding: 40px 0px 60px;
+  padding-bottom: 60px;
 
   @include tablet {
-    padding: 60px 0px 64px;
+    padding-bottom: 64px;
   }
   @include desktop {
-    padding: 121px 0px 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -40,7 +40,7 @@
 }
 
 .advantages__indicators--liters::before {
-  background-image: url(../images/advantages.png/mobile2x/advantages.mob-1-2x.png);
+  background-image: url('../images/advantages.png/mobile2x/advantages.mob-1-2x.png');
   @include before('', inline-block, 33px, 50px, transparent, contain, 16px);
 
   @include tablet {
@@ -53,7 +53,7 @@
 }
 
 .advantages__indicators--apples::before {
-  background-image: url(../images/advantages.png/mobile2x/advantages.mob-2-2x.png);
+  background-image: url('../images/advantages.png/mobile2x/advantages.mob-2-2x.png');
   @include before('', inline-block, 50px, 50px, transparent, contain, 16px);
 
   @include tablet {
@@ -66,7 +66,7 @@
 }
 
 .advantages__indicators--hearts::before {
-  background-image: url(../images/advantages.png/mobile2x/advantages.mob-3-2x.png);
+  background-image: url('../images/advantages.png/mobile2x/advantages.mob-3-2x.png');
   stroke: #ffa5ba;
   fill: #ffa5ba;
   @include before('', inline-block, 44px, 50px, transparent, contain, 16px);

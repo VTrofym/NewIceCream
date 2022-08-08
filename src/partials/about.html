@@ -1,37 +1,47 @@
-<section class="about">
-    <div class="container">
-        <p class="about__text">tradition and love</p>
-        <h2 class="abut__title">how it&#8217;s made&#63;</h2>
-        <!-- <picture>
-            <source 
-            srcset="
-                ./images/about-bg1-desk.png 1x,
-                ./images/about-bg1-desk@2x.png 2x
-                "
-                media="(min-width:1200px)"
-                >
-            <source 
-            srcset="
-                ./images/about-bg1-tabl.png 1x,
-                ./images/about-bg1-tabl@2x.png 2x
-                " 
-                media="(min-width:768px)"
-                > 
-            <source 
-            srcset="
-                ./images/about-bg1-tab.png 1x,
-                ./images/about-bg1-tab@2x.png 2x
-                " media="(min-width:480px)"
-                >
-            <img class="about__img" src="./images/about-bg1-desk.png" alt="cow and milk" width="501px" height="501px">
-        </picture>  -->
-        <div class="about__feature">
-            <p class="about__text-pre">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
-            Maecenas eleifend erat at justo fringilla.</p>
-            <p class="about__text-after">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
-            Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
-            <p class="about__text-after ">Aliquam erat volutpat. Aenean accumsan.</p>
-            <button type="button" class="about__button">Read more</button>
-        </div>
+<section class="about" id="about--ancor">
+  <div class="container container--milk-bg">
+    <div class="about__wrap">
+      <p class="about__text">tradition and love</p>
+      <h2 class="about__title">how it&#8217;s made&#63;</h2>
+
+      <picture>
+        <source
+          srcset="./images/about-desk.png 1x, ./images/about-desk@2x.png 2x"
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="./images/about-tab.png 1x, ./images/about-tab@2x.png 2x"
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="./images/about-mob.png 1x, ./images/about-mob@2x.png 2x"
+          media="(min-width:480px)"
+        />
+        <img
+          class="about__img"
+          src="./images/about-desk.png"
+          alt="cow and milk"
+        />
+      </picture>
+      <div class="about__feature">
+        <p class="about__text-pre">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+        <p class="about__text-after">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt. Aliquam erat volutpat. Aenean accumsan.
+        </p>
+        <button type="button" class="button button--light about__button">
+          Read more
+          <svg class="about__icon" width="4px" height="8px">
+            <use href="./images/icons-sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
 </section>

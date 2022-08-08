@@ -1,3 +1,24 @@
 <div class="hero-modal__backdrop is-hidden">
-  <div class="hero-modal"></div>
+  <div class="hero-modal">
+    <button class="hero-modal__close-button" type="button">
+      <svg width="20px" height="20px">
+        <use href="./images/icons-sprite.svg#icon-cancel-circle"></use>
+      </svg>
+    </button>
+    <h2 class="hero-modal__title">You whant it!</h2>
+    <form class="hero-modal__form">
+      <label class="hero-modal__label" for="customer-number"
+        >Just leave your number and we will call you back soon
+      </label>
+      <input
+        class="hero-modal__number"
+        type="tel"
+        required
+        name="customer-number"
+        id="customer-number"
+        placeholder="+3 80.. ... .. .."
+      />
+      <button class="hero-modal__submit-button" type="submit">say yes!</button>
+    </form>
+  </div>
 </div>

@@ -34,7 +34,7 @@
       width: 335px;
       height: 333px;
     }
-    @include tablet {
+    @include desktop {
       top: 54px;
       left: 517px;
       width: 534px;
@@ -96,7 +96,7 @@
 // Main title
 .hero__title {
   width: 230px;
- @include font(400, 26px, (30 / 26),0.04em,null);
+ @include font(400, 26px, 1.15,0.04em,null);
   font-family: $second-font;
   font-style: normal;
   text-transform: uppercase;
@@ -105,13 +105,13 @@
     width: 162px;
     padding-top: 10px;
     font-size: 22px;
-    line-height: (25 / 22);
+    line-height: 1.14;
   }
   @include desktop {
     width: 277px;
     padding-top: 0;
     font-size: 38px;
-    line-height: (44 /38) ;
+    line-height: 1.16 ;
 
   }
 }
@@ -122,7 +122,7 @@
   padding: 0;
   margin: 0;
   display: block;
-  @include font(null, 48px, 0.9, null, $acent-color);
+  @include font(null, 48px, 1.16, null, $acent-color);
   @include tablet {
     font-size: 34px;
   }
@@ -139,7 +139,7 @@
     grid-row: 2;
   }
   @include desktop {
-    padding-top: 24px;
+    margin-top: 24px;
     column-gap: 12px;
   }
 }
@@ -149,7 +149,7 @@
 height: 24px;
 width: 63px;
 padding: 8px 0;
-@include font(400,8px,(10 / 8),null,null);
+@include font(400,8px,1.25,null,null);
 @include desktop {
   width: 107px;
   height: 40px;
@@ -157,7 +157,7 @@ padding: 8px 0;
   padding: 12px 0;
 
   font-size: 14px;
-  line-height: (18 / 14);
+  line-height: 1.29;
 }
 }
 .hero__button--light{
@@ -177,12 +177,12 @@ padding: 8px 0;
 
     margin-top: 61px;
     margin-left: -10px;
-    @include font(400, 8px, (12 / 8), null, null);
+    @include font(400, 8px, 1.5, null, null);
     width: 120px;
     @include desktop {
       width: 200px;
       font-size: 14px;
-      line-height: (20 / 14);
+      line-height: 1.43;
     }
   }
 }
@@ -231,27 +231,29 @@ padding: 8px 0;
   &::before{
     content: '';
     position: absolute;
-    right: -18;
-    top: -4;
+    right: -8px;
+    top: -2px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: $alternative-color;
     z-index: -1;
     @include desktop {
+      right: -18px;
+      top: -4px;
       width: 30px;
       height: 30px;
     }
   }
   
 }
-// Acheve text
+// Achive text
 .achive__text {
   text-align: right;
-  @include font(400, 8px, (10 / 8), null, null);
+  @include font(400, 8px, 1.25, null, null);
   @include desktop {
     font-size: 14px;
-    line-height: (18 / 14);
+    line-height: 1.29;
   }
 }
 
@@ -259,10 +261,10 @@ padding: 8px 0;
   display: block;
   font-family: $second-font;
   text-transform: uppercase;
-  @include font(400, 28px, (32 / 28), null, $acent-color);
+  @include font(400, 28px, 1.14, null, $acent-color);
   @include desktop {
     font-size: 46px;
-    line-height: (53 / 46);
+    line-height: 1.15;
 
   }
 }
