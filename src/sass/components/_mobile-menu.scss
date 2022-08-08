@@ -82,7 +82,7 @@
   padding: 12px 20px;
   font-family: $primary-font;
   text-decoration: none;
-  @include font(700, 14px, (18 / 14), null, inherit);
+  @include font(700, 14px, 1.28, null, inherit);
   @include transition (color);
 
   &:hover,

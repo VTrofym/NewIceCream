@@ -1,39 +1,45 @@
 .about {
     padding-top: 60px;
+    padding-bottom: 40px;
     background-color: $advantages-bkg;
+    @media screen and (min-width: 768px){
+    padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+    padding-bottom: 121px;
+    background-image: url('.././images/about-bg-desk.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:  bottom;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url('.././images/about-bg-desk@2x.png');
+}
+}
 }
 
-.container--milk-bg {
-    background-image: url('.././images/about-bg-mob.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0 80%;
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url('.././images/about-bg-mob@2x.png');
-        }
-    @media screen and (min-width: 768px) {
-        background-image: none;
-        }
-}
+// .container--milk-bg {
+//     background-image: url('.././images/about-bg-mob.png');
+//     background-repeat: no-repeat;
+//     background-size: 100%;
+//     background-position: 0 80%;
+//     @media (min-device-pixel-ratio: 2),
+//         (min-resolution: 192dpi),
+//         (min-resolution: 2dppx) {
+//         background-image: url('.././images/about-bg-mob@2x.png');
+//         }
+//     @media screen and (min-width: 768px) {
+//         background-image: none;
+//         }
+// }
 
 .about__wrap {
     position: relative;
-    @media screen and (min-width: 1200px) {
-        margin-left: -16px;
-        margin-right: -16px;
-        background-image: url('.././images/about-bg-desk.png');
-        background-repeat: no-repeat;
-        background-position: 0 80%;
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-size: contain;
-        background-position: center;
-        background-image: url('.././images/about-bg-desk@2x.png');
-        }
-    }
 }
 
 .about__text {
