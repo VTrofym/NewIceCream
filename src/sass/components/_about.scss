@@ -23,20 +23,20 @@
 }
 }
 
-// .container--milk-bg {
-//     background-image: url('.././images/about-bg-mob.png');
-//     background-repeat: no-repeat;
-//     background-size: 100%;
-//     background-position: 0 80%;
-//     @media (min-device-pixel-ratio: 2),
-//         (min-resolution: 192dpi),
-//         (min-resolution: 2dppx) {
-//         background-image: url('.././images/about-bg-mob@2x.png');
-//         }
-//     @media screen and (min-width: 768px) {
-//         background-image: none;
-//         }
-// }
+.container--milk-bg {
+    background-image: url('.././images/about-bg-mob.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 80%;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('.././images/about-bg-mob@2x.png');
+        }
+    @media screen and (min-width: 768px) {
+        background-image: none;
+        }
+}
 
 .about__wrap {
     position: relative;
