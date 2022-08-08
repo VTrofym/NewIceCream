@@ -44,6 +44,7 @@
     }
 
     @include desktop {
+        margin-bottom: 281px;
          @include font(null, 58px, 1.14, 0.06em, null);
     }   
 }
@@ -209,13 +210,11 @@
     border-radius: 24px;
 
     @include tablet {
-        height: 473px;
         width: 224px;
         padding: 118px 40px 32px;
     }
     
     @include desktop {
-        height: 535px;
         width: 368px;
         padding: 165px 60px 61px;
     }
