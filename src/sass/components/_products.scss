@@ -219,10 +219,11 @@
         padding: 165px 60px 61px;
     }
 }
-
-.card__bg--1{
+.card__bg--1 {
     background-color: $hero-bkg-color;
+
 }
+
 
 .card__bg--2{
     background-color: #F0D1A5;
@@ -259,7 +260,10 @@
         @include font(null, 30px, 1.13, null, null);
     }
 }
-
+.card__description{
+    overflow: hidden;
+    position: relative;
+}
 
 .card__after-title{
     @include font(700, 14px, 1.52, 0.04em, $alternative-color);
@@ -275,10 +279,37 @@
     margin-bottom: 60px;
     }
 }
+.card__after--1-fwd{
+    @include transition (transform);
+    transform: translateX(0%);
+    .card__bg--1.flip & {
+        transform: translateX(-100%);
+    }
+}
+.card__after--1-back{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    @include transition (transform);
+    .card__bg--1.flip &{
+        transform: translateX(0);
+    }
+}
 
 .card__btn{
     width: 40px;
     height: 40px;
     margin: 0 auto;
     flex-shrink: 0;
+    .card__bg--1.flip &{
+        transform: rotate(180deg);
+    }
+    .card__bg--2.flip & {
+        transform: rotate(180deg);
+    }
+    .card__bg--3.flip & {
+        transform: rotate(180deg);
+    }
+
 }
