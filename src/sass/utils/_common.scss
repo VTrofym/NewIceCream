@@ -29,6 +29,7 @@ img{
 }
 // Common property
 :root {
+  scroll-behavior: smooth;
   font-family: $primary-font;
   font-weight: 500;
   font-size: 14px;

@@ -10,13 +10,16 @@
 
 .advantages {
   background-color: $advantages-bkg;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
   @include tablet {
-    padding-bottom: 64px;
+    padding-top: 30px;
+    padding-bottom: 32px;
   }
   @include desktop {
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 

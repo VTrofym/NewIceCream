@@ -1,13 +1,15 @@
 .contacts {
-  padding-top: 60px;
-  background: linear-gradient(#fff 362px, #fff5f6 362px);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: linear-gradient(#fff 332px, #fff5f6 332px);
   @include tablet {
-    padding-top: 80px;
-    background: linear-gradient(#fff 379px, #fff5f6 379px);
+    padding-top: 40px;
+    background: linear-gradient(#fff 332px, #fff5f6 332px);
   }
   @include desktop {
-    padding-top: 120px;
-    background: linear-gradient(#fff 219px, #fff5f6 219px);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(#fff 159px, #fff5f6 159px);
   }
 }
 
