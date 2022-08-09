@@ -1,0 +1,102 @@
+.franchise__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.franchise__backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.franchise__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgb(71, 30, 99);
+  z-index: 120;
+
+  width: 100%;
+  padding: 15px;
+
+  background-color: #ffb8ca;
+
+  @include desktop {
+    width: 700px;
+  }
+}
+
+.franchise__text {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.franchise__box {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.franchise__label {
+  text-align: left;
+
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.franchise__input {
+  padding-left: 20px;
+  border-radius: 8px;
+  border-color: transparent;
+  background-color: #fff5f6;
+}
+
+.franchise__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.textarea-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.textarea__input {
+  padding: 20px;
+  width: 100%;
+
+  resize: none;
+
+  background-color: #fff5f6;
+  border-radius: 8px;
+  border-color: transparent;
+}

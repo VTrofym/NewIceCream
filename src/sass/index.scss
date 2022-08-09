@@ -1,21 +1,23 @@
 // Utils
-@import "./utils/vars";
-@import "./utils/mixins";
-@import "./utils/common";
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/common';
 
 // Page header styles
-@import "./components/header";
-@import "./components/mobile-menu";
-@import "./components/hero-modal";
+@import './components/header';
+@import './components/mobile-menu';
+@import './components/hero-modal';
 
 // Main syules
-@import "./components/hero";
-@import "./components/products";
-@import "./components/about";
-@import "./components/advantages";
-@import "./components/gallery";
-@import "./components/customer-reviews";
-@import "./components/contacts";
+@import './components/hero';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/contacts';
+@import './components/modal-locations';
+@import './components/modal-franchise';
 
 // Footer styles
-@import "./components/footer";
+@import './components/footer';
