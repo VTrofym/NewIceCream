@@ -291,8 +291,52 @@
     left: 0;
     bottom: 0;
     transform: translateX(100%);
+    color: $acent-color;
     @include transition (transform);
     .card__bg--1.flip &{
+        transform: translateX(0);
+    }
+}
+
+.card__after--2-fwd {
+    @include transition (transform);
+    transform: translateX(0%);
+
+    .card__bg--2.flip & {
+        transform: translateX(-100%);
+    }
+}
+
+.card__after--2-back {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    @include transition (transform);
+    color: $acent-color;
+
+    .card__bg--2.flip & {
+        transform: translateX(0);
+    }
+}
+.card__after--3-fwd {
+    @include transition (transform);
+    transform: translateX(0%);
+
+    .card__bg--3.flip & {
+        transform: translateX(-100%);
+    }
+}
+
+.card__after--3-back {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    @include transition (transform);
+    color: $acent-color;
+
+    .card__bg--3.flip & {
         transform: translateX(0);
     }
 }
@@ -312,4 +356,22 @@
         transform: rotate(180deg);
     }
 
+}
+
+
+.card__item{
+    animation: scale-up-center 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
 }
