@@ -1,0 +1,42 @@
+<div class="franchise__backdrop is-hidden" data-franch>
+  <div class="franchise__modal">
+    <button class="hero-modal__close-button" type="button" data-franch-close>
+      <svg width="20px" height="20px">
+        <use href="./images/icons-sprite.svg#icon-cancel-circle"></use>
+      </svg>
+    </button>
+
+    <p class="locations__text">Leave your details! We will call you back.</p>
+
+    <form class="franchise__form">
+      <div class="franchise__box">
+        <label class="franchise__label" for="username">Name</label>
+        <input
+          class="franchise__input"
+          type="text"
+          name="username"
+          id="username"
+        />
+      </div>
+      <div class="franchise__box">
+        <label class="franchise__label" for="phone"> Telephone</label>
+        <input class="franchise__input" type="tel" name="phone" id="phone" />
+      </div>
+      <div class="franchise__box">
+        <label class="franchise__label" for="email">Email</label>
+        <input class="franchise__input" type="email" name="email" id="email" />
+      </div>
+      <div class="textarea-box">
+        <label class="franchise__label">Comment</label>
+        <textarea
+          class="textarea__input"
+          name="comment"
+          rows="6"
+          placeholder="Your comment"
+        ></textarea>
+      </div>
+
+      <button class="button" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
