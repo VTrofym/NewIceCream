@@ -1,14 +1,10 @@
 .products{
-    background-color: $alternative-color;
-}
-
-.products__wrapper{
-    padding-top: 60px;
+        padding-top: 60px;
     padding-bottom: 60px;
     @include desktop{
         padding-top: 61px;
     }
-
+    background-color: $alternative-color;
 }
 
 .products__pre-title{

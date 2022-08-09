@@ -3,10 +3,6 @@
   position: relative;
   background-color: $hero-bkg-color;
   overflow: hidden;
-}
-
-.hero__wraper{
-  position: relative;
   padding-top: 194px;
   padding-bottom: 158px;
   @include tablet {
@@ -17,30 +13,38 @@
     padding-top: 147px;
     padding-bottom: 84px;
   }
+
+}
+
+.hero__wraper{
+  position: relative;
   // Circle
     &::before {
     content: '';
     position: absolute;
-    top: 83px;
-    left: 36px;
-  
+    top: -111px;
+    left: 16px;
+
     width: 346px;
     height: 344px;
     border-radius: 50%;
     background-color: #FFA5BA;
-    @include tablet{
-      top: 43px;
-      left: 248px;
+
+    @include tablet {
+      top: -43px;
+      left: 216px;
       width: 335px;
       height: 333px;
     }
+
     @include desktop {
-      top: 54px;
-      left: 501px;
+      left: 485px;
       width: 534px;
       height: 534px;
     }
   }
+  
+
 }
 // Images
 .hero__thumb {
@@ -48,12 +52,14 @@
 }
 
 .hero__bg--icecream {
-  bottom: 0;
+  bottom: -158px;
   left: 97px;
   @include tablet {
+    bottom: -56px;
     left: 322px;
   }
   @include desktop{
+    bottom: -84px;
     left: 634px;
   }
 }
@@ -63,11 +69,10 @@
   @include tablet {
     display: block;
     left: 0;
-    bottom: 16px;
+    bottom: -40px;
   }
   @include desktop{
-    left: 16px;
-    bottom: 60px;
+    bottom: -24px;
   }
 }
 
@@ -76,11 +81,11 @@
   @include tablet{
     display: block;
     right: 0;
-    bottom: 0;
+    bottom: -56px;
   }
-    @include desktop {
-      right: 0px;
-    }
+  @include desktop {
+    bottom: -84px;
+  }
 }
 // All content in section
 .hero__content{

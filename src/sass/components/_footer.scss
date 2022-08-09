@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 3px;
   background: #fff5f6;
   position: relative;
@@ -7,7 +7,7 @@
     padding-bottom: 8px;
   }
   @include desktop {
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 4px;
   }
 }

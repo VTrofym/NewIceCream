@@ -1,12 +1,12 @@
 .about {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     background-color: $advantages-bkg;
     @media screen and (min-width: 768px){
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     }
     @media screen and (min-width: 1200px) {
-    padding-bottom: 121px;
+    padding-bottom: 60px;
     background-image: url('.././images/about-bg-desk.png');
     background-size: 100%;
     background-repeat: no-repeat;

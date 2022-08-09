@@ -1,8 +1,13 @@
 .customer {
   background-color: $alternative-color;
-  padding-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include tablet{
+    padding-bottom: 40px;
+  }
   @include desktop {
-    padding-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .customer__wraper {

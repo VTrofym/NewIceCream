@@ -1,10 +1,15 @@
 .gallery {
-  background: linear-gradient($advantages-bkg 27px, $alternative-color 27px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient($advantages-bkg 57px, $alternative-color 57px);
   @include tablet {
-    background: linear-gradient($advantages-bkg 187px, $alternative-color 187px);
+    padding-top: 32px;
+    background: linear-gradient($advantages-bkg 219px, $alternative-color 219px);
   }
   @include desktop {
-    background: linear-gradient($advantages-bkg 89px, $alternative-color 89px);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient($advantages-bkg 149px, $alternative-color 149px);
   }
 }
 .gallery__list {
