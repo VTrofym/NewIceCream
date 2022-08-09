@@ -23,21 +23,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  z-index: 1520;
+  z-index: 9999;
   padding: 15px;
 
   background-color: #ffb8ca;
 }
 
-.map {
+.locations__modal-container {
   width: 275px;
   @include tablet {
-    width: 100%;
+    width: 500px;
   }
 
   @include desktop {
-    width: 100%;
+    width: 700px;
   }
+}
+
+.map {
+  width: 100%;
 }
 
 .map__box {
