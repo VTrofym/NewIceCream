@@ -1,0 +1,2 @@
+!function(){var e={openMenuBtn1:document.querySelector(".buy-now--header"),openMenuBtn2:document.querySelector(".buy-now"),closeMenuBtn:document.querySelector(".hero-modal__close-button"),menu:document.querySelector(".hero-modal__backdrop"),body:document.querySelector("body")};function n(){e.menu.classList.toggle("is-hidden"),e.body.classList.toggle("no-scroll")}e.openMenuBtn1.addEventListener("click",n),e.openMenuBtn2.addEventListener("click",n),e.closeMenuBtn.addEventListener("click",n)}();
+//# sourceMappingURL=index.595e83f1.js.map
